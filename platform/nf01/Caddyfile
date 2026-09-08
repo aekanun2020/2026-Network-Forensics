@@ -1,0 +1,18 @@
+{
+    admin off
+}
+
+34-142-187-162.sslip.io {
+    tls {
+        issuer acme {
+            dir https://acme-v02.api.letsencrypt.org/directory
+        }
+    }
+    @mcp path /mcp /mcp/*
+    handle @mcp {
+        reverse_proxy spark-hdfs-mcp:8000
+    }
+    handle {
+        respond "NF-01 MCP endpoint: /mcp" 200
+    }
+}

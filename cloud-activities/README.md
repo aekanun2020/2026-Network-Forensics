@@ -8,6 +8,8 @@
 - [student-1: ผลทดสอบ MCP/HDFS/Spark](2026-09-08-004-student-1-verification.md)
 - [student-1: จำกัดคิว Spark](2026-09-08-005-student-1-spark-queue.md)
 
+- [student-1: เตรียม HTTPS และสถานะการเปิดใช้งาน](2026-09-08-006-student-1-https.md)
+
 ## ผลตรวจ
 
 - [สรุป deployment และข้อจำกัดที่ยังเหลือ](evidence/2026-09-08-deployment-summary.json)
