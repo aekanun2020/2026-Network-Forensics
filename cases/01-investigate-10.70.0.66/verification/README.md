@@ -1,6 +1,8 @@
 # ผลตรวจคำตอบและการทำซ้ำจากไฟล์โดยไม่ใช้ MCP
 
-[โจทย์](../QUESTION.md) · [คำตอบเดิม](../AGENT-ANSWER.md) · [เฉลย](../REFERENCE-ANSWER.md) · [หลักฐาน](../evidence/README.md)
+[โจทย์เดิม](../QUESTION-v1.md) · [คำตอบเดิม](../AGENT-ANSWER.md) · [เฉลย](../REFERENCE-ANSWER.md) · [หลักฐาน](../evidence/README.md)
+
+ผลที่บันทึกด้านล่างเกิดก่อน [NF-01-v2](../QUESTION.md) ไม่ใช่ผลรัน investigator หรือผลเปรียบเทียบ agent ด้วยโจทย์ฉบับใหม่
 
 ผู้ประเมินความหมายคือ **Codex ในรอบจัดวางนี้ วันที่ 8 กันยายน 2026** ตรวจคำตอบเดิมและผลอ่าน raw files ซ้ำด้วย [check_raw.py](check_raw.py) และ tcpdump ไม่เรียก MCP และไม่ใช้ external model/LLM judge สคริปต์วัดค่าเชิงกำหนดแน่นอน ไม่ได้สร้างข้อวินิจฉัยแทน Codex
 

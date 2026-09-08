@@ -4,7 +4,9 @@
 
 | โจทย์ | คำถาม | คำตอบของ agent | เฉลยที่ตรวจแล้ว |
 |---|---|---|---|
-| 01 — กิจกรรมของ 10.70.0.66 | [โจทย์และขอบเขต](cases/01-investigate-10.70.0.66/QUESTION.md) | [คำตอบ Codex ที่ผู้ใช้ส่งมาตรวจ](cases/01-investigate-10.70.0.66/AGENT-ANSWER.md) | [คำตอบอ้างอิงพร้อม records/packets](cases/01-investigate-10.70.0.66/REFERENCE-ANSWER.md) |
+| 01 — กิจกรรมของ 10.70.0.66 | [NF-01-v2: ระบุไฟล์และ hashes ครบ](cases/01-investigate-10.70.0.66/QUESTION.md) | [คำตอบ Codex ต่อโจทย์เดิม](cases/01-investigate-10.70.0.66/AGENT-ANSWER.md) | [คำตอบอ้างอิงสำหรับหลักฐานชุดนี้](cases/01-investigate-10.70.0.66/REFERENCE-ANSWER.md) |
+
+ส่งโจทย์ NF-01-v2 ทั้งหน้าให้ agent เพื่อให้ได้รับขอบเขตเดียวกัน อ่าน [เหตุผลและหลักฐานรองรับการแก้โจทย์](cases/01-investigate-10.70.0.66/QUESTION-CHANGELOG.md) และ [โจทย์เดิม](cases/01-investigate-10.70.0.66/QUESTION-v1.md) คำตอบที่เก็บไว้ก่อนหน้านี้ยังไม่ใช่ผลรันของโจทย์ v2
 
 ## เปิดหลักฐานและตรวจคำตอบ
 

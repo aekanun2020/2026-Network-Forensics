@@ -1,6 +1,6 @@
 # คำตอบ Codex ที่ผู้ใช้ส่งมาตรวจ
 
-[โจทย์](QUESTION.md) · [เฉลยที่ตรวจแล้ว](REFERENCE-ANSWER.md) · [ต้นฉบับตรงทุก byte](support/agent-answer-original.txt)
+[โจทย์เดิมที่คำตอบนี้ใช้](QUESTION-v1.md) · [เฉลยที่ตรวจแล้ว](REFERENCE-ANSWER.md) · [ต้นฉบับตรงทุก byte](support/agent-answer-original.txt)
 
 เอกสารนี้เก็บคำตอบเดิม ไม่ใช่การรัน agent ใหม่ ปรับเฉพาะปลายทางลิงก์ไฟล์ชั่วคราวให้เปิดใน repo นี้ได้ ข้อจำกัดเรื่องการอ่าน body เพียงส่วนต้นเป็นข้อความของคำตอบเดิม ไม่แก้ย้อนหลัง
 

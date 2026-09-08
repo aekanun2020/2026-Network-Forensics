@@ -2,13 +2,14 @@
 
 [กลับสารบัญหลัก](../../README.md)
 
-1. [โจทย์](QUESTION.md) — คำถามต้นฉบับและหลักฐานที่ต้องใช้
-2. [คำตอบ](AGENT-ANSWER.md) — คำตอบ Codex ที่ผู้ใช้ส่งมา แก้เฉพาะลิงก์เพื่อเปิดใน GitHub
+1. [โจทย์ NF-01-v2](QUESTION.md) — ระบุ F1–F6, paths และ SHA-256 พร้อมเงื่อนไขการอ้างหลักฐาน; ส่งทั้งหน้าให้ agent
+2. [คำตอบต่อโจทย์เดิม](AGENT-ANSWER.md) — คำตอบ Codex ที่ผู้ใช้ส่งมา แก้เฉพาะลิงก์เพื่อเปิดใน GitHub ไม่ใช่ผลรัน v2
 3. [คำตอบที่ถูกต้องสำหรับชุดข้อมูลนี้](REFERENCE-ANSWER.md) — Codex เรียบเรียงจาก raw evidence และผล cross-check พร้อมข้อจำกัด
 4. [ผลตรวจคำตอบและวิธีทำซ้ำ](verification/README.md)
 
 ## เอกสารตรวจสอบย้อนกลับ
 
+- [โจทย์เดิม](QUESTION-v1.md) และ [หลักฐานรองรับการแก้โจทย์](QUESTION-CHANGELOG.md)
 - [หลักฐานหกไฟล์](evidence/README.md) และ [manifest ต้นฉบับ](evidence/source-manifest.json)
 - [ต้นฉบับคำตอบไม่แก้ไข](support/agent-answer-original.txt)
 - [ผล MCP ที่คำตอบเดิมอ้าง](support/mcp/) — ผลที่เก็บไว้จากรอบก่อน ไม่ได้เรียก MCP ใหม่ในการจัดวางครั้งนี้
