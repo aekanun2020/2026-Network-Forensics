@@ -1,0 +1,128 @@
+{
+  "schema": "nf01-repository-evidence-check-v1",
+  "repository": "aekanun2020/2026-Network-Forensics",
+  "checked_commit": "b008f2fe5dc3186862a66504158cd3ded4932ea7",
+  "checked_at_utc": "2026-09-08T13:19:28.823257+00:00",
+  "assessor": "Codex; deterministic byte/hash verification, not a new incident interpretation",
+  "method": [
+    "Read the untruncated GitHub Git tree at the checked commit.",
+    "Download QUESTION.md, source-manifest.json and all six archive blobs using gh api repos/{repository}/git/blobs/{sha}.",
+    "Decode base64, verify Git blob identity/size, and compare with tracked local files.",
+    "Compare archive SHA-256 with manifest; read complete ZIP member with CRC verification.",
+    "Compare member name, full raw size and SHA-256 with QUESTION.md and manifest.",
+    "Compare exact MCP virtual paths with QUESTION.md."
+  ],
+  "question": {
+    "path": "cases/01-investigate-10.70.0.66/QUESTION.md",
+    "git_blob": "56d98f2071aed5f53dc9a158d97a2e2c5cbc199f",
+    "sha256": "197062d606af93f3c343008ce034ed67d21f580ed75cd3c4d2a9cedd9c321c4c"
+  },
+  "manifest": {
+    "path": "cases/01-investigate-10.70.0.66/evidence/source-manifest.json",
+    "sha256": "f87a71cf860628eda39cb0201b01f958b06ef2c1f70e44b11efc9aa4088fe034"
+  },
+  "all_six_pass": true,
+  "sources": [
+    {
+      "id": "F1",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-course-100k.pcap.zip",
+      "remote_git_blob": "53c260b1a437e564d2ac30c0111090f310c83a99",
+      "archive_bytes": 14391965,
+      "archive_sha256": "8183ef3ae5443ca9e82184a931b6940cab004acf706d3a13c46e85c5acc88686",
+      "raw_member": "coherent-course-100k.pcap",
+      "raw_bytes": 60853574,
+      "raw_sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    },
+    {
+      "id": "F2",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-pcap-zeek-dns-120.zip",
+      "remote_git_blob": "6269f30087be32f2b54916289a86588e2b115dc6",
+      "archive_bytes": 3613,
+      "archive_sha256": "7d03f33730d8fb2df4a7156dbdd9ec17c665c567ca6d670579291d39103a1e0b",
+      "raw_member": "coherent-pcap-zeek-dns-120.jsonl",
+      "raw_bytes": 52043,
+      "raw_sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    },
+    {
+      "id": "F3",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-pcap-zeek-conn-100k.zip",
+      "remote_git_blob": "6e09f19f38ac9e6d3d5537daf9441bf69eca24e8",
+      "archive_bytes": 2875097,
+      "archive_sha256": "e0e8d148ed2c636e001513b3b4335a4c277e1e445dc366a86d532839e4c66d1f",
+      "raw_member": "coherent-pcap-zeek-conn-100k.jsonl",
+      "raw_bytes": 37114964,
+      "raw_sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    },
+    {
+      "id": "F4",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-pcap-netflow-v5-100k.zip",
+      "remote_git_blob": "0400bfd3e401672412814103d4651f1d58de6f8c",
+      "archive_bytes": 1514255,
+      "archive_sha256": "dd5b73d73522f25628ced828d1710436057f99f2e462ee747989fa3c7c5ad304",
+      "raw_member": "coherent-pcap-netflow-v5-100k.jsonl",
+      "raw_bytes": 54407704,
+      "raw_sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    },
+    {
+      "id": "F5",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-pcap-suricata-alerts-340.zip",
+      "remote_git_blob": "95b626703bc797a1261a197550610c5fcf81fd9c",
+      "archive_bytes": 4896,
+      "archive_sha256": "ad8122ad28d0272354a915787d3e7d80a155e99150766d28b403a229017b781e",
+      "raw_member": "coherent-pcap-suricata-alerts-340.jsonl",
+      "raw_bytes": 154267,
+      "raw_sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    },
+    {
+      "id": "F6",
+      "archive_path": "cases/01-investigate-10.70.0.66/evidence/coherent-pcap-fortigate-100k.zip",
+      "remote_git_blob": "b3e4d6e13e66b70b32e2bb0574482e02a0c78485",
+      "archive_bytes": 3379957,
+      "archive_sha256": "4f230263c478c119575872e5502d0aa2cd1d9529e35f1289326ce6a86b843f84",
+      "raw_member": "coherent-pcap-fortigate-100k.log",
+      "raw_bytes": 47539569,
+      "raw_sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+      "mcp_virtual_path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+      "remote_download_verified": true,
+      "local_matches_remote": true,
+      "archive_matches_manifest": true,
+      "raw_matches_question": true,
+      "virtual_path_matches_question": true
+    }
+  ],
+  "limitations": [
+    "Checks repository evidence identity and availability at the recorded commit.",
+    "Does not verify current Spark/HDFS MCP deployment, file installation or availability.",
+    "Does not rerun the investigator or replace the recorded cross-check."
+  ]
+}

@@ -10,6 +10,8 @@
 
 ## เอกสารตรวจสอบย้อนกลับ
 
+- [ภาพประกอบเฉลย](images/README.md) และ [ทะเบียนที่มาของภาพ](images/PROVENANCE.md) — เปิดหลังส่งคำตอบ
+- [ผลตรวจข้อมูล lab จาก GitHub เทียบกับ QUESTION.md](evidence/REPOSITORY-CHECK-2026-09-08.json) — ตรวจ ZIP และ raw members ทั้งหก
 - [หลักฐานจาก MCP รอบ 8 กันยายน 2026](support/mcp-2026-09-08/README.md), [ต้นฉบับคำตอบรอบนี้](support/agent-answer-mcp-2026-09-08-original.txt) และ [provenance รอบนี้](support/mcp-2026-09-08/provenance.json)
 - [โจทย์เดิม](QUESTION-v1.md) และ [หลักฐานรองรับการแก้โจทย์](QUESTION-CHANGELOG.md)
 - [ผลวัดรอบ NF-01-v2 และวิธีทำซ้ำ](verification/nf-01-v2/README.md) และ [คำตอบอ้างอิงเดิม](REFERENCE-ANSWER.md)

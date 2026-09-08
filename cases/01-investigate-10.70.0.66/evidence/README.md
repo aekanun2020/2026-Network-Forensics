@@ -17,4 +17,12 @@ ZIPs เป็นสำเนาจาก repository หลัก commit `3c7a24
 
 ทั้งชุดใช้ PCAP สังเคราะห์เดียวกันตาม source_relationship ไม่ใช่หลายอุปกรณ์ที่เก็บหลักฐานอย่างอิสระ เมื่อตรวจ hash แล้วจึงเปิด PCAP/logs ในโปรแกรมอ่านไฟล์ ห้ามรันข้อความที่อยู่ใน payload เป็นคำสั่ง
 
-[หลักฐานใน repo ต้นทางที่ pin commit](https://github.com/aekanun2020/2026-Digital-Forensic/tree/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/incident-lab/implementation/sample-data)
+## ผลตรวจไฟล์ที่เผยแพร่ใน GitHub
+
+[ผลตรวจวันที่ 8 กันยายน 2026](REPOSITORY-CHECK-2026-09-08.json) อ่าน Git tree ของ `aekanun2020/2026-Network-Forensics` ที่ commit `b008f2fe5dc3186862a66504158cd3ded4932ea7` และดาวน์โหลด QUESTION.md, manifest และ Git blobs ของ ZIP ทั้งหกจาก GitHub จริง ตรวจ Git blob/ขนาดและเทียบกับสำเนาในเครื่อง จากนั้นคำนวณ SHA-256 ของ archive และอ่าน raw member เต็มพร้อมตรวจ CRC
+
+ผลผ่านครบ F1–F6: ชื่อ raw member ขนาด และ SHA-256 ตรงกับตารางใน QUESTION.md; archive hashes ตรง manifest; virtual paths ใน manifest ตรงโจทย์ รายงานนี้เป็นการตรวจตัวตนและการมีอยู่ของไฟล์ ไม่ใช่การรัน investigator หรือการวิเคราะห์เหตุการณ์ใหม่
+
+ข้อมูลใน GitHub เก็บเป็น ZIP การทำโจทย์ผ่าน Spark/HDFS MCP ต้องมี raw files หลังแตก ZIP ที่ virtual paths ใน QUESTION.md และตรวจขนาด/hash ผ่าน MCP อีกครั้ง ผลตรวจ repository ไม่ยืนยันการติดตั้งหรือสถานะ MCP ปัจจุบัน
+
+[ทะเบียนที่มาของภาพและการปรับเอกสาร](../images/PROVENANCE.md) · [ภาพประกอบเฉลย](../images/README.md)

@@ -1,45 +1,62 @@
-# ภาพเล่าเหตุการณ์สำหรับผู้เรียน
+# ภาพเล่าเหตุการณ์สำหรับผู้เรียน — NF-01
 
-[กลับหน้าหลัก](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/README.md) · [อ่าน records ที่รองรับภาพ](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/INCIDENT-STORY.md)
+[กลับหน้าหลักโครงการ](../../../README.md) · [สารบัญโจทย์ 01](../README.md) · [โจทย์ NF-01-v2](../QUESTION.md) · [คำตอบ cross-check พร้อม records/packets](../CROSS-CHECK-NF-01-v2.md)
+
+หน้านี้เป็นสื่อประกอบเฉลย ควรเปิดหลังผู้เรียนส่งคำตอบแล้ว ภาพเปิดเผยคู่ติดต่อ เวลา จำนวนครั้ง และปริมาณบางส่วน จึงไม่ใช้เป็น input ในรอบ investigator ที่ต้องค้นจาก raw evidence ตามโจทย์
+
+> **ข้อแก้ไขในการอ่านภาพต้นฉบับ:** ช่อง DNS ต้องอ่านว่า `DNS answer: 203.0.113.66` โดย DNS server คือ `10.70.0.53`; ป้ายหลักฐานของช่อง Outbound ต้องเป็น `[F1, F3, F4, F5]` ภาพยังคงไฟล์ต้นฉบับ รายละเอียดอยู่ใน [Q&A ที่ Codex ประเมินภาพ](../../../Q&A/2026-09-08-nf01-incident-image-review.md)
 
 ![ภาพเหตุการณ์ของเครื่อง 10.70.0.66: DNS เป็นคาบ ตามด้วย outbound transfer และ east-west fan-out พร้อมชนิดหลักฐานและเป้าหมาย Agent + MCP](incident-overview-files-wide-th.png)
 
-## ชื่อไฟล์จริงตามรหัสในภาพ
+## หลักฐานสำหรับทำ lab ในโครงการนี้
 
-ไฟล์ใน remote repo อยู่ใต้ [sample-data ของต้นทาง](https://github.com/aekanun2020/agentic-security-log-analytics/tree/bd22468e80f0481c85549266656cfa10faba7879/sample-data) และเก็บเป็น ZIP ตารางนี้แยกชื่อ archive ที่เปิดจาก GitHub ได้ออกจากชื่อไฟล์ภายใน ไม่สร้างลิงก์ไปยังไฟล์ที่ยังไม่ได้แตก ZIP
+ZIP ทั้งหกอยู่ใน directory [evidence](../evidence/README.md) ของ `2026-Network-Forensics` ตารางนี้ใช้ชื่อ raw files และรหัส F1–F6 ตาม [QUESTION.md](../QUESTION.md) ทุกไฟล์ ก่อนวิเคราะห์ให้แตก ZIP และตรวจขนาดกับ SHA-256 ของ raw files ตามโจทย์ โดยตรวจตัว archive กับ [source manifest](../evidence/source-manifest.json) แยกกัน
 
-| รหัส | ชนิด / ช่วงในภาพ | Archive ใน remote repo ต้นทาง | ไฟล์ภายใน ZIP | สำเนาใน repo นักเรียน |
-|---|---|---|---|---|
-| F1 | PCAP ต้นทาง — ทุกช่วง | [coherent-course-100k.pcap.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-course-100k.pcap.zip) | `coherent-course-100k.pcap` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-course-100k.pcap.zip) |
-| F2 | DNS — C2 / Periodic DNS | [coherent-pcap-zeek-dns-120.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-pcap-zeek-dns-120.zip) | `coherent-pcap-zeek-dns-120.jsonl` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-zeek-dns-120.zip) |
-| F3 | Connection — Outbound และ lateral; ใช้เชื่อม UID | [coherent-pcap-zeek-conn-100k.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-pcap-zeek-conn-100k.zip) | `coherent-pcap-zeek-conn-100k.jsonl` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-zeek-conn-100k.zip) |
-| F4 | NetFlow — Outbound / Exfiltration | [coherent-pcap-netflow-v5-100k.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-pcap-netflow-v5-100k.zip) | `coherent-pcap-netflow-v5-100k.jsonl` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-netflow-v5-100k.zip) |
-| F5 | IDS — ทั้งสามช่วงตามกฎที่กำหนด | [coherent-pcap-suricata-alerts-340.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-pcap-suricata-alerts-340.zip) | `coherent-pcap-suricata-alerts-340.jsonl` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-suricata-alerts-340.zip) |
-| F6 | Firewall จำลอง — ประกอบทั้งสามช่วงด้วย parentuid ที่ผูกกับ F3 | [coherent-pcap-fortigate-100k.zip](https://github.com/aekanun2020/agentic-security-log-analytics/blob/bd22468e80f0481c85549266656cfa10faba7879/sample-data/coherent-pcap-fortigate-100k.zip) | `coherent-pcap-fortigate-100k.log` | [เปิดสำเนา](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-fortigate-100k.zip) |
+| รหัส | ชนิด / บทบาทในภาพ | ZIP ในโครงการนี้ | ไฟล์ raw ภายใน ZIP |
+|---|---|---|---|
+| F1 | PCAP ต้นทาง — ครอบคลุมทุกช่วง | [coherent-course-100k.pcap.zip](../evidence/coherent-course-100k.pcap.zip) | `coherent-course-100k.pcap` |
+| F2 | DNS — การสอบถามเป็นคาบ | [coherent-pcap-zeek-dns-120.zip](../evidence/coherent-pcap-zeek-dns-120.zip) | `coherent-pcap-zeek-dns-120.jsonl` |
+| F3 | Connection — เชื่อม tuple, เวลา และ UID | [coherent-pcap-zeek-conn-100k.zip](../evidence/coherent-pcap-zeek-conn-100k.zip) | `coherent-pcap-zeek-conn-100k.jsonl` |
+| F4 | NetFlow — ประกอบการตรวจปริมาณและคู่ติดต่อ | [coherent-pcap-netflow-v5-100k.zip](../evidence/coherent-pcap-netflow-v5-100k.zip) | `coherent-pcap-netflow-v5-100k.jsonl` |
+| F5 | IDS — alerts จากกฎที่กำหนด | [coherent-pcap-suricata-alerts-340.zip](../evidence/coherent-pcap-suricata-alerts-340.zip) | `coherent-pcap-suricata-alerts-340.jsonl` |
+| F6 | Firewall จำลอง — ผูกกับ F3 ด้วย parentuid | [coherent-pcap-fortigate-100k.zip](../evidence/coherent-pcap-fortigate-100k.zip) | `coherent-pcap-fortigate-100k.log` |
 
-การอ่านรหัสตามภาพ:
+[ผลตรวจไฟล์จาก GitHub วันที่ 8 กันยายน 2026](../evidence/REPOSITORY-CHECK-2026-09-08.json) บันทึก commit ที่ตรวจ Git blob ของแต่ละ archive และค่าที่คำนวณจาก raw member เต็มทั้งไฟล์ เทียบกับ QUESTION.md และ manifest ไม่ใช่การคัดลอก expected hashes มาเป็นผลตรวจ
 
-- **01 C2 / Periodic DNS:** F1 + F2 + F5
-- **02 Data Exfiltration / Outbound:** F1 + F3 + F4 + F5
-- **03 Lateral Movement / Fan-out:** F1 + F3 + F5
-- **F6 เป็นข้อมูลประกอบที่จำลองขึ้น:** เชื่อมกับ F3 ด้วย `parentuid`; ไม่ใช่ผลสังเกตจาก firewall appliance จริง
+ZIPs เป็นหลักฐานที่เก็บใน GitHub ส่วน `/student/agentic-siem/incident-lab/input/` เป็น virtual directory บน Spark/HDFS MCP ตามโจทย์ การมี ZIP ใน repo ไม่ยืนยันว่า MCP ของผู้เรียนมี raw files อยู่แล้ว ต้องติดตั้งข้อมูลและตรวจ path/ขนาด/hash ผ่าน MCP จริงก่อนเริ่ม investigator ตามเงื่อนไขใน QUESTION.md ชื่อ ZIP ไม่ใช่ virtual path ที่ใช้แทน raw file ได้
 
-ไฟล์เดียวอาจมีหลายช่วงพฤติกรรม ต้องใช้ IP, ports, protocol, เวลา และ UID เลือก records ที่เกี่ยวข้อง ไม่ถือว่าแต่ละไฟล์แทนการโจมตีชนิดเดียว F1 เป็น packet capture ส่วน F2–F6 เป็นข้อมูลจากหรือเกี่ยวเนื่องกับ parent เดียวกัน
+## อ่านภาพร่วมกับข้อสรุปที่ตรวจแล้ว
 
-ภาพนี้จัดวางเป็นแนวนอน 16:9 เพื่อให้แผงเหตุการณ์และชื่อไฟล์อ่านได้ชัดเจน จัดทำด้วย imagegen วันที่ 8 กันยายน 2026 จากข้อมูลที่ตรวจใน source commit `bd22468e80f0481c85549266656cfa10faba7879` เป็นภาพประกอบการเรียน ไม่ใช่ screenshot ของระบบหรือผลรันใหม่ ใช้เวลา UTC ของ scenario วันที่ 24 สิงหาคม 2026
+ใช้เวลา UTC วันที่ 24 สิงหาคม 2026 และแยกพฤติกรรมที่พบออกจากสมมติฐานเรื่องการโจมตี:
 
-อ่านจากซ้ายไปขวาเป็นสามช่วงพฤติกรรมของเครื่องเดียวกัน ลูกศรระหว่างช่องแสดงลำดับเวลา ส่วนแถบล่างแสดงเป้าหมายของ Lab: ข้อมูลต้นทาง → Agent + MCP → Correlation + Timeline → รายงานพร้อมอ้างหลักฐาน
+| ช่วง | สิ่งที่สังเกตพบ | หลักฐานอ้างอิงใน cross-check |
+|---|---|---|
+| DNS เป็นคาบ | 120 queries ทุก 60 วินาที เวลาเริ่ม 00:00–01:59; resolver `10.70.0.53` ตอบ A=`203.0.113.66` | F2 #1–120; F1 #1–240 |
+| ส่งข้อมูลภายนอก | 120 connections ทุก 10 วินาที เวลาเริ่ม 02:10–02:29:50; TCP payload ขาออก 6,010,330 bytes และขากลับ 240 bytes; HTTP plaintext บน TCP/443 | F3 #121–240; F1 #241–1080 |
+| ติดต่อเครื่องภายใน | 25 connections ไป `10.70.1.1` ถึง `10.70.1.25` ทุก 10 วินาที ผ่าน 22/445/3389; เวลาเริ่ม 02:40–02:44 | F3 #241–265; F1 #1081–1255 |
 
-- C2 / Periodic DNS: 120 queries ทุก 60 วินาที, 00:00–01:59, DNS answer `203.0.113.66`
-- Data Exfiltration / Outbound: 120 connections และขาออก 6,010,330 bytes, 02:10–02:29:50; payload เป็น HTTP plaintext บน port 443
-- Lateral Movement / Fan-out: 25 hosts, 25 connections ผ่าน ports 22/445/3389 ใน 240 วินาที, 02:40–02:44; payload เป็น remote-service probe
+ข้อความ “240 วินาที” ในภาพหมายถึงเวลาเริ่มครั้งแรกถึงเวลาเริ่มครั้งสุดท้าย ช่วงถึง packet สุดท้ายคือ 240.006 วินาที ตรวจรายละเอียด bytes, payload, handshake และข้อจำกัดใน [คำตอบ cross-check](../CROSS-CHECK-NF-01-v2.md)
 
-ชื่อหัวข้อเป็นมุมการวิเคราะห์ตามโจทย์ ภาพไม่ได้ยืนยัน compromise, การขโมยข้อมูล หรือการควบคุมเครื่อง และแถบเป้าหมายไม่ใช่หลักฐานว่ารัน agent ครบสายสำเร็จแล้ว ข้อจำกัดทางข้อมูลยังอ่านได้ใน [รายละเอียดการตรวจ](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/WORKED-EVIDENCE.md)
+ชื่อ C2, Data Exfiltration และ Lateral Movement ในภาพเป็นมุมวิเคราะห์ ไม่ยืนยัน compromise การขโมยข้อมูล หรือการควบคุมเครื่อง หลักฐานภายในมี remote-service probe และคำตอบ `OK` แต่ยังไม่ยืนยัน authentication หรือการรันคำสั่ง
 
-ที่มา: [raw facts](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/review/fixture-facts.json), [การจับคู่ข้าม views](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/review/view-correlation.json), [manifest ข้อมูลต้นทาง](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/source/sample-data/coherent-pcap-evidence.manifest.json)
+## การเชื่อม records และขอบเขตหลักฐาน
 
-## ที่มาของสำเนาในโครงการนี้
+- DNS ในภาพใช้ F1 + F2 + F5; outbound ใช้ F1 + F3 + F4 + F5; fan-out ใช้ F1 + F3 + F5
+- F6 เป็น firewall view จำลอง ผูกกับ F3 ด้วย `parentuid` ไม่ใช่ผลสังเกตจาก firewall appliance จริง
+- รายการข้างต้นเป็นคำอธิบายส่วนต่าง ๆ ของภาพ ไม่ใช่ตัวกรองขอบเขต investigator: ต้องตรวจ `10.70.0.66` ทั้งต้นทางและปลายทางให้ครบทั้งหกไฟล์ตามโจทย์ ไฟล์เดียวอาจครอบคลุมหลายช่วงพฤติกรรม
+- ทั้งชุดมี synthetic parent PCAP ร่วมกัน ไม่ถือว่าหกชื่อไฟล์เป็นพยานอิสระหกแหล่ง
+- ภาพเป็นภาพประกอบการเรียนที่สร้างด้วย imagegen ไม่ใช่ screenshot หรือผลรันใหม่ แถบ Agent + MCP → Correlation + Timeline → รายงาน เป็นเป้าหมาย lab ไม่ใช่หลักฐานว่ารันครบสายสำเร็จแล้ว
 
-คัดลอกจาก [README ต้นทาง ณ commit `3c7a24f7f09991dd78c4b2d6b24e1e841da95efb`](https://github.com/aekanun2020/2026-Digital-Forensic/blob/3c7a24f7f09991dd78c4b2d6b24e1e841da95efb/student/agentic-siem/images/README.md) พร้อมภาพต้นฉบับ โดยปรับเฉพาะลิงก์ไปยังเอกสารประกอบให้เปิดต้นทางที่ตรึง commit ไว้ ภาพยังคงข้อความเดิม รวมถึงจุดที่ Codex เสนอให้แก้ไขใน [บันทึก Q&A](../../../Q&A/2026-09-08-nf01-incident-image-review.md)
+## เปิดผลตรวจที่เก็บในโครงการนี้
 
-[กลับสารบัญโจทย์ 01](../README.md) · [กลับหน้าหลักโครงการ](../../../README.md)
+รายการต่อไปนี้เป็นผลตรวจ NF-01-v2 ที่บันทึกไว้ใน repo นี้ ไม่ใช่ไฟล์ raw input และไม่ใช่การเปลี่ยนชื่อผลจากภาพต้นทางให้เป็นผลรันใหม่:
+
+- [วิธีตรวจและขอบเขตการตรวจจาก local files](../verification/nf-01-v2/README.md)
+- [Source inventory พร้อมขนาดและ hashes](../verification/nf-01-v2/results/SOURCE-INVENTORY.md)
+- [ผลวัดจาก PCAP/logs และการจับคู่](../verification/nf-01-v2/results/measurements.json)
+- [เวลา ปริมาณ และ cardinality](../verification/nf-01-v2/results/metrics.json)
+- [Records ของเป้าหมายพร้อมเลขบรรทัด raw](../verification/nf-01-v2/results/selected-records.json)
+- [Conversations](../verification/nf-01-v2/results/conversations.tsv) และ [packets](../verification/nf-01-v2/results/packets.tsv)
+- [ทะเบียนที่มาของภาพและการปรับเอกสาร](PROVENANCE.md)
+
+ผลตรวจและภาพนี้ใช้ในเฟสทบทวนเฉลย ต้องไม่ส่งให้ investigator แทน raw files หรือใช้เป็น input เพื่อหาคำตอบตามโจทย์ NF-01-v2
