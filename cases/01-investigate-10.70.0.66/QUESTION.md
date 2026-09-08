@@ -4,7 +4,16 @@
 
 ## 1. คำถามและขอบเขต
 
-ตรวจสอบกิจกรรมของ **10.70.0.66** เฉพาะจาก raw evidence **F1–F6 ที่ระบุในข้อ 2** แล้วตอบว่า:
+ตรวจสอบกิจกรรมของ **10.70.0.66** โดยอ่านเฉพาะไฟล์ raw หกไฟล์ต่อไปนี้จาก Spark/HDFS MCP ใช้ **virtual paths แบบเต็ม** ดังนี้:
+
+1. `/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap`
+2. `/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl`
+3. `/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl`
+4. `/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl`
+5. `/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl`
+6. `/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log`
+
+ตรวจขนาดและ SHA-256 ของไฟล์ทั้งหกตามข้อ 2 ก่อนวิเคราะห์ รหัส F1–F6 ในตารางเป็นเพียงชื่อย่อของไฟล์ที่ระบุข้างต้นตามลำดับ ไม่ใช่ชื่อไฟล์หรือคำสั่งให้ค้นหาไฟล์อื่น แล้วตอบคำถามต่อไปนี้:
 
 1. ติดต่อ IP ใดบ้าง ใครเป็นผู้เริ่มการติดต่อ ใช้ ports/protocol ใด และพบข้อมูลตอบกลับหรือไม่
 2. มีกิจกรรมอะไรเกิดขึ้นตามลำดับเวลา แต่ละกิจกรรมเกิดกี่ครั้ง มีช่วงห่างอย่างไร และกินช่วงเวลาเท่าใด
