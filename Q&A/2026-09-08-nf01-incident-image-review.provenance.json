@@ -1,0 +1,21 @@
+{
+  "schema": "qa-reading-edition-provenance-v1",
+  "source_repository": "aekanun2020/2026-Network-Forensics",
+  "source_commit": "d24c718dea0f8341b02c6bdc399e5005ab77b4a3",
+  "source_path": "Q&A/2026-09-08-nf01-incident-image-review.md",
+  "original_archive": "Q&A/originals/2026-09-08-nf01-incident-image-review.original.txt",
+  "original_bytes": 6605,
+  "original_sha256": "c7e3cd319b23081ac7b5e5aa0f33719b26be2f57577609a5c8e4bfa9fd1d9c6d",
+  "reading_edition": "Q&A/2026-09-08-nf01-incident-image-review.md",
+  "reading_edition_sha256": "a4e9f4d72de85da96a82636e4db3284d1caf69ba2d851712a0b85cf29b3132c2",
+  "actual_assessor": "Codex",
+  "assessment_status": "Historical assessment from 2026-09-08; no new answer assessment or raw-evidence investigation in this edit",
+  "changes": [
+    "Replace the question image-link label and target with the internal image README.",
+    "Replace the answer image link and the three cross-check/question links with relative links.",
+    "Add reading-edition title and historical-context notice.",
+    "Keep the historical assessment wording unchanged."
+  ],
+  "link_occurrences_changed": 5,
+  "original_archive_verified_byte_for_byte": true
+}

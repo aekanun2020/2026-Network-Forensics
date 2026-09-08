@@ -23,7 +23,8 @@
 - [ผลตรวจ ZIP และ raw files ทั้งหกจาก GitHub เทียบกับโจทย์](cases/01-investigate-10.70.0.66/evidence/REPOSITORY-CHECK-2026-09-08.json) — ดาวน์โหลดและตรวจ hashes วันที่ 8 กันยายน 2026
 - [ทะเบียนที่มาของภาพประกอบ NF-01](cases/01-investigate-10.70.0.66/images/PROVENANCE.md) — ตัวระบุต้นทางและ hashes พร้อมประวัติการปรับเอกสาร
 - [ภาพเล่าเหตุการณ์ NF-01 พร้อมคำอธิบายและรายการ F1–F6](cases/01-investigate-10.70.0.66/images/README.md) — เปิดหลังส่งคำตอบ; ภาพพร้อมคำแก้ไขในการอ่านและลิงก์เอกสาร/ZIP ภายในโครงการ
-- [Q&A: ภาพเล่าเหตุการณ์สอดคล้องกับโจทย์ NF-01 อย่างไร](Q&A/2026-09-08-nf01-incident-image-review.md) — คำถามและคำตอบคู่ล่าสุดแบบถอดคำตรงตัว ประเมินโดย Codex เทียบกับ cross-check ที่บันทึกไว้
+- [Q&A ฉบับปรับลิงก์: ภาพเล่าเหตุการณ์สอดคล้องกับโจทย์ NF-01 อย่างไร](Q&A/2026-09-08-nf01-incident-image-review.md) — ผลประเมินของ Codex ก่อนปรับ README ภาพ ใช้ลิงก์ภายในโครงการ
+- [ต้นฉบับ Q&A ก่อนปรับลิงก์](Q&A/originals/2026-09-08-nf01-incident-image-review.original.txt) และ [ทะเบียนที่มาพร้อม SHA-256](Q&A/2026-09-08-nf01-incident-image-review.provenance.json) — เก็บข้อความเดิมทุก byte
 - [หลักฐานรอบคำตอบ MCP วันที่ 8 กันยายน 2026](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/README.md) — source inventory, queries/outputs, packets และข้อผิดพลาดที่เก็บไว้
 - [ต้นฉบับคำตอบ MCP รอบนี้](cases/01-investigate-10.70.0.66/support/agent-answer-mcp-2026-09-08-original.txt) และ [ทะเบียนที่มาของรอบนี้](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/provenance.json)
 - [สารบัญโจทย์ 01](cases/01-investigate-10.70.0.66/README.md)
