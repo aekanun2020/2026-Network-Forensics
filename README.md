@@ -34,3 +34,8 @@
 - [คำตอบต้นฉบับตรงทุก byte](cases/01-investigate-10.70.0.66/support/agent-answer-original.txt) และ [ทะเบียนที่มา/ไฟล์ที่คัดลอก](cases/01-investigate-10.70.0.66/PROVENANCE.json)
 
 ข้อมูลโจทย์ 01 เป็นชุดสังเคราะห์ที่มี PCAP ต้นทางร่วมกัน ไม่ใช่เหตุโจมตีจริงที่ได้รับการยืนยัน คำตอบของ agent และผลวัดก่อนหน้านี้ถูกเก็บตามที่มา ไม่เปลี่ยนให้เป็นผลรัน Codex รอบใหม่ และไม่มี Python agent หรือ external LLM judge ในขั้นตอนตรวจคำตอบ
+
+## การติดตั้งและกิจกรรม Cloud
+
+- [บันทึกกิจกรรม GCP](cloud-activities/README.md)
+- [ชุดติดตั้ง container สำหรับ NF-01 — กำลังทดสอบภายใน](platform/nf01/README.md)

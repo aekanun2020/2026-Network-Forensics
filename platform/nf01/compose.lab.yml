@@ -1,0 +1,59 @@
+name: nf01-group1
+x-log: &log
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+services:
+  security-log-skills-mcp:
+    cpus: 0.5
+    mem_limit: 512m
+    pids_limit: 128
+    logging: *log
+  spark-hdfs-mcp:
+    cpus: 2
+    mem_limit: 12g
+    pids_limit: 1024
+    logging: *log
+    volumes:
+      - ./imports:/imports:ro
+  namenode:
+    cpus: 1
+    mem_limit: 2g
+    pids_limit: 256
+    environment:
+      HADOOP_HEAPSIZE_MAX: "1024"
+    logging: *log
+    volumes:
+      - ./imports:/imports:ro
+  datanode-1:
+    cpus: 0.5
+    mem_limit: 2g
+    pids_limit: 256
+    environment:
+      HADOOP_HEAPSIZE_MAX: "1024"
+    logging: *log
+  datanode-2:
+    cpus: 0.5
+    mem_limit: 2g
+    pids_limit: 256
+    environment:
+      HADOOP_HEAPSIZE_MAX: "1024"
+    logging: *log
+  spark-master:
+    cpus: 0.5
+    mem_limit: 1g
+    pids_limit: 256
+    logging: *log
+  spark-worker-1:
+    cpus: 2
+    mem_limit: 5g
+    pids_limit: 512
+    command: [/opt/spark/bin/spark-class, org.apache.spark.deploy.worker.Worker, --webui-port, "8081", --cores, "2", --memory, 4g, "spark://spark-master:7077"]
+    logging: *log
+  spark-worker-2:
+    cpus: 2
+    mem_limit: 5g
+    pids_limit: 512
+    command: [/opt/spark/bin/spark-class, org.apache.spark.deploy.worker.Worker, --webui-port, "8081", --cores, "2", --memory, 4g, "spark://spark-master:7077"]
+    logging: *log

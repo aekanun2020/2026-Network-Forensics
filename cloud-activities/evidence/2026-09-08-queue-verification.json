@@ -1,0 +1,522 @@
+{
+  "started_at": "2026-09-08T14:54:54.785649+00:00",
+  "status": "PASS",
+  "model_calls": 0,
+  "calls": [
+    {
+      "tool": "spark_save_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "code": "from pyspark.sql import SparkSession\nimport time\ns=SparkSession.builder.appName(\"NF01-queue-control\").getOrCreate()\ntime.sleep(120)\ns.stop()\n"
+      },
+      "is_error": false,
+      "result": {
+        "filename": "queue_control_1788879294845717233.py",
+        "bytes": 141,
+        "sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "saved": true
+      }
+    },
+    {
+      "tool": "spark_validate_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py"
+      },
+      "is_error": false,
+      "result": {
+        "filename": "queue_control_1788879294845717233.py",
+        "valid_python": true,
+        "imports_pyspark": true
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-0"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "3e770233-d0ff-4b2f-863f-797958a96461",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "3e770233-d0ff-4b2f-863f-797958a96461.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-0",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.882845+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-1"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "b94691c3-009e-404d-a383-5842e89ef95e",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "b94691c3-009e-404d-a383-5842e89ef95e.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-1",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.897238+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-2"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "218b7b43-ccab-49c4-b68c-5a71c026080d",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "218b7b43-ccab-49c4-b68c-5a71c026080d.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-2",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.911208+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-3"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "badb4519-2886-4036-bfa9-7b732924314e",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "badb4519-2886-4036-bfa9-7b732924314e.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-3",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.922892+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-4"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "d9f47527-c061-47ce-a95f-110d8aefd514",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "d9f47527-c061-47ce-a95f-110d8aefd514.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-4",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.937604+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-5"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "5986c364-e00f-4cd0-be3a-3aa9c8963bee",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "5986c364-e00f-4cd0-be3a-3aa9c8963bee.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-5",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.994595+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-6"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "e8dabe11-2736-43d0-b310-528a86c0f799",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "e8dabe11-2736-43d0-b310-528a86c0f799.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-6",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.013021+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-7"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "4b9b4d96-6158-4b53-8186-d2005c58ba42.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-7",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.089010+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-0"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "3e770233-d0ff-4b2f-863f-797958a96461",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "3e770233-d0ff-4b2f-863f-797958a96461.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-0",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "RUNNING",
+        "pid": 1761,
+        "started_at": "2026-09-08T14:54:54.882845+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "launched_at": "2026-09-08T14:54:54.885063+00:00",
+        "deduplicated": true
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "queue_control_1788879294845717233.py",
+        "expected_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "conf": {
+          "spark.driver.memory": "512m",
+          "spark.cores.max": "1"
+        },
+        "idempotency_key": "1788879294845717233-overflow"
+      },
+      "is_error": true,
+      "result": [
+        "Error executing tool spark_submit_job: Spark admission queue is full (8 jobs); retry after a job finishes"
+      ]
+    },
+    {
+      "tool": "spark_job_status",
+      "arguments": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "4b9b4d96-6158-4b53-8186-d2005c58ba42.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-7",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.089010+00:00",
+        "finished_at": null,
+        "exit_code": null
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "4b9b4d96-6158-4b53-8186-d2005c58ba42.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-7",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.089010+00:00",
+        "finished_at": "2026-09-08T14:54:55.196520+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "4b9b4d96-6158-4b53-8186-d2005c58ba42",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "4b9b4d96-6158-4b53-8186-d2005c58ba42.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-7",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.089010+00:00",
+        "finished_at": "2026-09-08T14:54:55.196520+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "e8dabe11-2736-43d0-b310-528a86c0f799"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "e8dabe11-2736-43d0-b310-528a86c0f799",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "e8dabe11-2736-43d0-b310-528a86c0f799.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-6",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:55.013021+00:00",
+        "finished_at": "2026-09-08T14:54:55.221758+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "5986c364-e00f-4cd0-be3a-3aa9c8963bee"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "5986c364-e00f-4cd0-be3a-3aa9c8963bee",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "5986c364-e00f-4cd0-be3a-3aa9c8963bee.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-5",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.994595+00:00",
+        "finished_at": "2026-09-08T14:54:55.235719+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "d9f47527-c061-47ce-a95f-110d8aefd514"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "d9f47527-c061-47ce-a95f-110d8aefd514",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "d9f47527-c061-47ce-a95f-110d8aefd514.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-4",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.937604+00:00",
+        "finished_at": "2026-09-08T14:54:55.293362+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "badb4519-2886-4036-bfa9-7b732924314e"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "badb4519-2886-4036-bfa9-7b732924314e",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "badb4519-2886-4036-bfa9-7b732924314e.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-3",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.922892+00:00",
+        "finished_at": "2026-09-08T14:54:55.306219+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "218b7b43-ccab-49c4-b68c-5a71c026080d"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "218b7b43-ccab-49c4-b68c-5a71c026080d",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "218b7b43-ccab-49c4-b68c-5a71c026080d.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-2",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": null,
+        "started_at": "2026-09-08T14:54:54.911208+00:00",
+        "finished_at": "2026-09-08T14:54:55.322315+00:00",
+        "exit_code": null,
+        "launch_error": "CancelledError: "
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "b94691c3-009e-404d-a383-5842e89ef95e"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "b94691c3-009e-404d-a383-5842e89ef95e",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "b94691c3-009e-404d-a383-5842e89ef95e.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-1",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": 1770,
+        "started_at": "2026-09-08T14:54:54.897238+00:00",
+        "finished_at": "2026-09-08T14:54:55.400104+00:00",
+        "exit_code": 143,
+        "launched_at": "2026-09-08T14:54:54.900174+00:00"
+      }
+    },
+    {
+      "tool": "spark_cancel_job",
+      "arguments": {
+        "job_id": "3e770233-d0ff-4b2f-863f-797958a96461"
+      },
+      "is_error": false,
+      "result": {
+        "job_id": "3e770233-d0ff-4b2f-863f-797958a96461",
+        "application": "queue_control_1788879294845717233.py",
+        "code_snapshot": "3e770233-d0ff-4b2f-863f-797958a96461.job.py",
+        "code_sha256": "717922a8442657cce41592342a756bc460d5ab5f4ba4a33772d1a3336ca065d2",
+        "request_sha256": "d5296b57648eb272c296963798d8fc97ec4c1390b872154edf9c9509dc546952",
+        "idempotency_key": "1788879294845717233-0",
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "CANCELLED",
+        "pid": 1761,
+        "started_at": "2026-09-08T14:54:54.882845+00:00",
+        "finished_at": "2026-09-08T14:54:55.429079+00:00",
+        "exit_code": 143,
+        "launched_at": "2026-09-08T14:54:54.885063+00:00"
+      }
+    }
+  ],
+  "finished_at": "2026-09-08T14:54:55.435532+00:00"
+}

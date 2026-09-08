@@ -1,0 +1,240 @@
+name: spark-standalone
+
+x-spark-common: &spark-common
+  image: apache/spark:3.5.6-scala2.12-java17-python3-ubuntu
+  restart: unless-stopped
+  networks:
+    - spark-network
+  volumes:
+    - ./jobs:/opt/spark-apps:ro
+    - ./hadoop/core-site.xml:/opt/spark/conf/core-site.xml:ro
+    - ./hadoop/hdfs-site.xml:/opt/spark/conf/hdfs-site.xml:ro
+
+x-hadoop-common: &hadoop-common
+  image: apache/hadoop:3.4.3
+  platform: linux/amd64
+  user: root
+  restart: unless-stopped
+  networks:
+    - spark-network
+  volumes:
+    - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+    - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+
+services:
+  security-log-skills-mcp:
+    build:
+      context: .
+      dockerfile: skill-registry/Dockerfile
+    hostname: security-log-skills-mcp
+    restart: unless-stopped
+    networks:
+      - spark-network
+    environment:
+      SKILLS_DIR: /skills
+      DRAFTS_DIR: /drafts
+    ports:
+      - "127.0.0.1:8003:8000"
+    volumes:
+      - ./log-skills:/skills:ro
+      - ./skill-drafts:/drafts
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('127.0.0.1', 8000), 2).close()"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+  spark-hdfs-mcp:
+    build:
+      context: .
+      dockerfile: mcp-server/Dockerfile
+    hostname: spark-hdfs-mcp
+    restart: unless-stopped
+    networks:
+      - spark-network
+    environment:
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_MASTER_UI_URL: http://spark-master:8080
+      HDFS_NAMENODE_URL: http://namenode:9870
+      HDFS_ROOT: /mcp
+      JOBS_DIR: /opt/spark-apps
+      JOB_STATE_DIR: /var/lib/spark-hdfs-mcp
+      IMPORTS_DIR: /imports
+    ports:
+      - "127.0.0.1:8001:8000"
+    volumes:
+      - ./jobs:/opt/spark-apps
+      - ./hadoop/core-site.xml:/opt/spark/conf/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/spark/conf/hdfs-site.xml:ro
+      - mcp-job-state:/var/lib/spark-hdfs-mcp
+      - ./imports:/imports
+    depends_on:
+      spark-worker-1:
+        condition: service_healthy
+      spark-worker-2:
+        condition: service_healthy
+      datanode-1:
+        condition: service_healthy
+      datanode-2:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8000'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  namenode:
+    <<: *hadoop-common
+    hostname: namenode
+    command:
+      - bash
+      - -c
+      - |
+        if [ ! -f /opt/hadoop/data/name/current/VERSION ]; then
+          hdfs namenode -format -force -nonInteractive
+        fi
+        exec hdfs namenode
+    ports:
+      - "127.0.0.1:19000:9000"
+      - "127.0.0.1:9870:9870"
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - namenode-data:/opt/hadoop/data/name
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/9870'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  datanode-1:
+    <<: *hadoop-common
+    hostname: datanode-1
+    command: ["hdfs", "datanode"]
+    ports:
+      - "127.0.0.1:9864:9864"
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - datanode-1-data:/opt/hadoop/data/data
+    depends_on:
+      namenode:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/9864'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  datanode-2:
+    <<: *hadoop-common
+    hostname: datanode-2
+    command: ["hdfs", "datanode"]
+    ports:
+      - "127.0.0.1:9865:9864"
+    volumes:
+      - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml:ro
+      - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml:ro
+      - datanode-2-data:/opt/hadoop/data/data
+    depends_on:
+      namenode:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/9864'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  spark-master:
+    <<: *spark-common
+    hostname: spark-master
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.master.Master
+      - --host
+      - spark-master
+      - --port
+      - "7077"
+      - --webui-port
+      - "8080"
+    ports:
+      - "127.0.0.1:7077:7077"
+      - "127.0.0.1:8080:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8080'"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    depends_on:
+      namenode:
+        condition: service_healthy
+      datanode-1:
+        condition: service_healthy
+      datanode-2:
+        condition: service_healthy
+
+  spark-worker-1:
+    <<: *spark-common
+    hostname: spark-worker-1
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.worker.Worker
+      - --webui-port
+      - "8081"
+      - --cores
+      - "1"
+      - --memory
+      - 1g
+      - spark://spark-master:7077
+    ports:
+      - "127.0.0.1:8081:8081"
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8081'"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+  spark-worker-2:
+    <<: *spark-common
+    hostname: spark-worker-2
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.worker.Worker
+      - --webui-port
+      - "8081"
+      - --cores
+      - "1"
+      - --memory
+      - 1g
+      - spark://spark-master:7077
+    ports:
+      - "127.0.0.1:8082:8081"
+    depends_on:
+      spark-master:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c '</dev/tcp/127.0.0.1/8081'"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+networks:
+  spark-network:
+    driver: bridge
+
+volumes:
+  namenode-data:
+  datanode-1-data:
+  datanode-2-data:
+  mcp-job-state:
