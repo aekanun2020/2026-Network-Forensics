@@ -1,0 +1,34 @@
+{
+  "question_id": "NF-01-v2",
+  "created_at_utc": "2026-09-08T12:04:24.208371+00:00",
+  "source_commit": "9c4b4c4679aab67a69ec992d5573794186d5ad7f",
+  "question_sha256": "197062d606af93f3c343008ce034ed67d21f580ed75cd3c4d2a9cedd9c321c4c",
+  "source_manifest_sha256": "f87a71cf860628eda39cb0201b01f958b06ef2c1f70e44b11efc9aa4088fe034",
+  "builder_sha256": "47a95dcf40dba83742f18293a4513e1aad5ea389866e4ddbd5bde2bbb5e3f588",
+  "method": "Raw ZIP/member verification and deterministic direct-file measurements",
+  "prior_results_read": false,
+  "mcp_calls": 0,
+  "model_api_calls_by_script": 0,
+  "tcpdump_command": [
+    "/usr/sbin/tcpdump",
+    "-nn",
+    "-tt",
+    "-q",
+    "-r",
+    "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-course-100k.pcap",
+    "host 10.70.0.66"
+  ],
+  "tcpdump_packet_lines": 1255,
+  "output_sha256": {
+    "metrics.json": "d63b40fe5c9e7437a290d162f6bfc45347634a6999c29f985860813a49adea6c",
+    "source-inventory.json": "8a483ea27452be014dade85de1897982b7b1f7c4a77db19af199af9c0c9bedad",
+    "tcpdump-stderr.txt": "6e2bdd0f21e7158b9c41e125c87aab737545688b015d152bd9325b1658184cda",
+    "measurements.json": "952fa44a2114fcc71bb75ed8901566b08acc0b1037513516d47676bac0f2fe6b",
+    "measurement-summary.json": "9c7580e29745626c55d10386d50b7b8a29f8483ce763a3342d5a6e61eb352159",
+    "conversations.tsv": "cc9aed998a58a12dc67eb52710accd7c8d097055ba36b204d3b708e846a8b15b",
+    "packets.tsv": "eaf0e3aa3bdbf3732373277baf62e1fab1849b2597f4fe2c6ab480a18c7b393f",
+    "tcpdump-target.txt": "d04fbc508d1c8846583fccb41a005c68dd7e1c138cdaeab90dd2fdb20df936e4",
+    "check_raw.py": "f709d9074940bbbaea203a8b15cb824fa15df6cd1714ab911ffc93169b705f4e",
+    "selected-records.json": "031cabb4d49de4d0a50bbdbe92ad7ef3b34f4a39d58b901e7aaf12468d7b7426"
+  }
+}

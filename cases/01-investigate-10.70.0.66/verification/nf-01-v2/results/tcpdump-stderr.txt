@@ -1,0 +1,1 @@
+reading from file /private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-course-100k.pcap, link-type EN10MB (Ethernet)

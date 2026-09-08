@@ -1,0 +1,68 @@
+[
+  {
+    "id": "F1",
+    "filename": "coherent-course-100k.pcap",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-course-100k.pcap.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-course-100k.pcap",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+    "bytes_measured": 60853574,
+    "sha256_measured": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+    "archive_sha256_measured": "8183ef3ae5443ca9e82184a931b6940cab004acf706d3a13c46e85c5acc88686",
+    "matches_manifest": true
+  },
+  {
+    "id": "F2",
+    "filename": "coherent-pcap-zeek-dns-120.jsonl",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-pcap-zeek-dns-120.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-pcap-zeek-dns-120.jsonl",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+    "bytes_measured": 52043,
+    "sha256_measured": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+    "archive_sha256_measured": "7d03f33730d8fb2df4a7156dbdd9ec17c665c567ca6d670579291d39103a1e0b",
+    "matches_manifest": true
+  },
+  {
+    "id": "F3",
+    "filename": "coherent-pcap-zeek-conn-100k.jsonl",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-pcap-zeek-conn-100k.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-pcap-zeek-conn-100k.jsonl",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+    "bytes_measured": 37114964,
+    "sha256_measured": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+    "archive_sha256_measured": "e0e8d148ed2c636e001513b3b4335a4c277e1e445dc366a86d532839e4c66d1f",
+    "matches_manifest": true
+  },
+  {
+    "id": "F4",
+    "filename": "coherent-pcap-netflow-v5-100k.jsonl",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-pcap-netflow-v5-100k.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-pcap-netflow-v5-100k.jsonl",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+    "bytes_measured": 54407704,
+    "sha256_measured": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+    "archive_sha256_measured": "dd5b73d73522f25628ced828d1710436057f99f2e462ee747989fa3c7c5ad304",
+    "matches_manifest": true
+  },
+  {
+    "id": "F5",
+    "filename": "coherent-pcap-suricata-alerts-340.jsonl",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-pcap-suricata-alerts-340.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-pcap-suricata-alerts-340.jsonl",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+    "bytes_measured": 154267,
+    "sha256_measured": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+    "archive_sha256_measured": "ad8122ad28d0272354a915787d3e7d80a155e99150766d28b403a229017b781e",
+    "matches_manifest": true
+  },
+  {
+    "id": "F6",
+    "filename": "coherent-pcap-fortigate-100k.log",
+    "archive_path_read": "/private/tmp/2026-network-forensics-publish/cases/01-investigate-10.70.0.66/evidence/coherent-pcap-fortigate-100k.zip",
+    "raw_path_read": "/private/tmp/nf01-v2-reference-final-20260908/evidence/coherent-pcap-fortigate-100k.log",
+    "hdfs_virtual_identity": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+    "bytes_measured": 47539569,
+    "sha256_measured": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+    "archive_sha256_measured": "4f230263c478c119575872e5502d0aa2cd1d9529e35f1289326ce6a86b843f84",
+    "matches_manifest": true
+  }
+]
