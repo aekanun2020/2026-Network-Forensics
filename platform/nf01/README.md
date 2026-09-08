@@ -1,6 +1,6 @@
 # NF-01 container platform — internal installation verified; learner access pending
 
-Runtime source is pinned in [UPSTREAM.json](UPSTREAM.json). Deployment uses the [original Compose](docker-compose.yml) and [lab override](compose.lab.yml). [HDFS configuration](hadoop/hdfs-site.xml) enables permissions; after import the raw input tree will be owned by root and read-only to the normal spark identity. Simple-auth HDFS is not a security boundary against arbitrary submitted code that impersonates other users. Public learner access remains disabled; the user has waived login and per-person isolation, but HTTPS startup is awaiting the specific public-exposure confirmation requested by automatic approval review and the user-managed firewall step.
+Runtime source is pinned in [UPSTREAM.json](UPSTREAM.json). Deployment uses the [original Compose](docker-compose.yml) and [lab override](compose.lab.yml). [HDFS configuration](hadoop/hdfs-site.xml) enables permissions; after import the raw input tree will be owned by root and read-only to the normal spark identity. Simple-auth HDFS is not a security boundary against arbitrary submitted code that impersonates other users. Public learner access remains disabled; the user has explicitly confirmed unauthenticated public access and waived per-person isolation. Certificate issuance and public verification are awaiting the user-managed firewall step.
 
 ## Operator files
 
@@ -11,7 +11,7 @@ Runtime source is pinned in [UPSTREAM.json](UPSTREAM.json). Deployment uses the 
 - [Canonical question and six input hashes](../../cases/01-investigate-10.70.0.66/QUESTION.md)
 - [Cloud activity records](../../cloud-activities/README.md)
 
-Run `sudo docker compose -f docker-compose.yml -f compose.lab.yml up -d --build` from the installation directory. The base and lab Compose files publish only to 127.0.0.1. The separately staged HTTPS override is not running. No GCP firewall changes are performed by these files. Skills MCP runs with an empty catalog until an in-scope catalog is selected; no reference answers, other datasets or attack-specific skills are staged.
+Run `sudo docker compose -f docker-compose.yml -f compose.lab.yml up -d --build` from the installation directory. The base and lab Compose files publish only to 127.0.0.1. The separate HTTPS service is prepared but stopped while the firewall step is pending. No GCP firewall changes are performed by these files. Skills MCP runs with an empty catalog until an in-scope catalog is selected; no reference answers, other datasets or attack-specific skills are staged.
 
 Initial installation is an administrator-only environment. Per-user authenticated workspaces are not yet implemented. Spark admission is bounded to 2 active jobs and 8 total admitted jobs; queued work is marked INTERRUPTED after server restart and is never silently replayed. Do not distribute this endpoint as a ready four-user lab.
 
@@ -33,8 +33,12 @@ The prepared endpoint hostname is `34-142-187-162.sslip.io`, verified by DNS to 
 
 - [HTTPS Compose override with pinned Caddy image](compose.https.yml)
 - [TLS ingress configuration](Caddyfile)
-- [HTTPS activity record and approval blocker](../../cloud-activities/2026-09-08-006-student-1-https.md)
+- [HTTPS activity record and remaining firewall step](../../cloud-activities/2026-09-08-006-student-1-https.md)
 
-The Caddy configuration passed real validation with networking disabled and no published ports. Automatic approval review blocked the command to install/start public HTTPS because unauthenticated callers could read evidence and submit Spark code. A specific confirmation of those public capabilities was requested. No HTTPS container was started and no certificate was issued. The user must also add `http-server` and `https-server` network tags to `student-1`; the verified existing rules allow TCP 80 and 443 from `0.0.0.0/0` for these tags. Codex has not modified firewall rules or tags.
+The Caddy configuration passed real validation with networking disabled and no published ports. The user subsequently explicitly confirmed public access to evidence and shared Spark execution, resolving the initial approval blocker. HTTPS startup succeeded, but both real ACME challenges timed out while connecting through the firewall. No certificate has been issued and no public MCP test has passed. The HTTPS service was stopped to avoid repeated failed issuance while waiting for the user-managed network step.
 
-After the pending confirmation and network step, deploy only the HTTPS service, verify a trusted certificate and real public MCP calls, and test Claude Desktop before declaring learner access verified. Public HTTPS without login gives every reachable caller shared tool access, including Spark execution. The configuration forwards the original Streamable HTTP transport without protocol conversion; Spark/HDFS UI and skills ports retain their loopback bindings.
+The user must add `http-server` and `https-server` network tags to `student-1`; the verified existing rules allow TCP 80 and 443 from `0.0.0.0/0` for these tags. Codex has not modified firewall rules or tags. The corrected HTTPS service explicitly joins the existing `spark-network` to reach the real MCP backend. The eight existing lab services remain running.
+
+After the network step, start only HTTPS using `sudo docker compose -f docker-compose.yml -f compose.lab.yml -f compose.https.yml up -d --no-deps https` in `/opt/nf01`. Verify a trusted certificate and real public MCP calls, and test Claude Desktop before declaring learner access verified. Public HTTPS without login gives every reachable caller shared tool access, including Spark execution. The configuration forwards the original Streamable HTTP transport without protocol conversion; Spark/HDFS UI and skills ports retain their loopback bindings.
+
+This deployment does not purchase a domain or a commercial certificate and does not create an additional VM or cloud load balancer. It uses the existing VM and a Let's Encrypt certificate once validation succeeds; existing GCP resource and network charges still apply.

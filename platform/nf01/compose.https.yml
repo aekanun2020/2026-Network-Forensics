@@ -2,6 +2,8 @@ services:
   https:
     image: caddy:2@sha256:df7f1c2fb114453b951de51a98efc010db1655a92c2e86be6706714e2417a78d
     restart: unless-stopped
+    networks:
+      - spark-network
     cpus: 0.5
     mem_limit: 256m
     pids_limit: 128

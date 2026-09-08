@@ -38,4 +38,4 @@
 ## การติดตั้งและกิจกรรม Cloud
 
 - [บันทึกกิจกรรม GCP](cloud-activities/README.md)
-- [ชุดติดตั้ง container สำหรับ NF-01 — ผ่านการทดสอบภายใน; HTTPS ยังไม่เปิด](platform/nf01/README.md)
+- [ชุดติดตั้ง container สำหรับ NF-01 — ผ่านการทดสอบภายใน; HTTPS รอเปิดพอร์ต](platform/nf01/README.md)
