@@ -20,6 +20,8 @@
 
 ## เปิดหลักฐานและตรวจคำตอบ
 
+- [ภาพเล่าเหตุการณ์ NF-01 พร้อมคำอธิบายและรายการ F1–F6](cases/01-investigate-10.70.0.66/images/README.md) — เปิดหลังส่งคำตอบ; สำเนาภาพต้นฉบับพร้อมลิงก์ไปยังบันทึกจุดที่ควรแก้ไข
+- [Q&A: ภาพเล่าเหตุการณ์สอดคล้องกับโจทย์ NF-01 อย่างไร](Q&A/2026-09-08-nf01-incident-image-review.md) — คำถามและคำตอบคู่ล่าสุดแบบถอดคำตรงตัว ประเมินโดย Codex เทียบกับ cross-check ที่บันทึกไว้
 - [หลักฐานรอบคำตอบ MCP วันที่ 8 กันยายน 2026](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/README.md) — source inventory, queries/outputs, packets และข้อผิดพลาดที่เก็บไว้
 - [ต้นฉบับคำตอบ MCP รอบนี้](cases/01-investigate-10.70.0.66/support/agent-answer-mcp-2026-09-08-original.txt) และ [ทะเบียนที่มาของรอบนี้](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/provenance.json)
 - [สารบัญโจทย์ 01](cases/01-investigate-10.70.0.66/README.md)
