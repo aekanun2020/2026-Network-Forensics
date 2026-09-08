@@ -1,0 +1,120 @@
+{
+  "schema": "network-forensics-case-provenance-v1",
+  "case_id": "01-investigate-10.70.0.66",
+  "source_repository": "https://github.com/aekanun2020/2026-Digital-Forensic",
+  "source_commit": "3c7a24f7f09991dd78c4b2d6b24e1e841da95efb",
+  "source_case_path": "student/agentic-siem/incident-lab/cases/01-investigate-10.70.0.66",
+  "source_archive_directory": "student/agentic-siem/incident-lab/implementation/sample-data",
+  "supplementary_repository": "https://github.com/aekanun2020/agentic-security-log-analytics",
+  "supplementary_commit": "bd22468e80f0481c85549266656cfa10faba7879",
+  "original_answer": "User-supplied pasted-text.txt; exact bytes preserved separately from linked rendering.",
+  "original_model_metadata": "Not established from the pasted answer; do not infer a model ID.",
+  "prior_results": "Copied unchanged from earlier same-day direct-file cross-check; not a new Codex investigation run.",
+  "copied_files": [
+    {
+      "path": "support/agent-answer-original.txt",
+      "bytes": 9952,
+      "sha256": "bc7f02a5a8f6aeb4b1b009cc7d86f13acb7e01e7a76d12b2d04ffd83551ae408"
+    },
+    {
+      "path": "evidence/source-manifest.json",
+      "bytes": 3223,
+      "sha256": "f87a71cf860628eda39cb0201b01f958b06ef2c1f70e44b11efc9aa4088fe034"
+    },
+    {
+      "path": "verification/check_raw.py",
+      "bytes": 11749,
+      "sha256": "f709d9074940bbbaea203a8b15cb824fa15df6cd1714ab911ffc93169b705f4e"
+    },
+    {
+      "path": "verification/prior/measurements.json",
+      "bytes": 284696,
+      "sha256": "952fa44a2114fcc71bb75ed8901566b08acc0b1037513516d47676bac0f2fe6b"
+    },
+    {
+      "path": "verification/prior/integrity.json",
+      "bytes": 2228,
+      "sha256": "ad06250743e392d0b9a6a0264c37f41c9a85f1d0c0926e392bc579b0e2056f24"
+    },
+    {
+      "path": "verification/prior/tcpdump-counts.json",
+      "bytes": 4759,
+      "sha256": "53f06132ebfaeba473f98865070df0568a04862a97fa02cfc17d33e1306b3a8e"
+    },
+    {
+      "path": "verification/prior/tcpdump-target.txt",
+      "bytes": 81845,
+      "sha256": "d04fbc508d1c8846583fccb41a005c68dd7e1c138cdaeab90dd2fdb20df936e4"
+    },
+    {
+      "path": "support/mcp/conn-summary.json",
+      "bytes": 8316,
+      "sha256": "f536f3fd0d57820db4c62a42b1f15035bdde284365056469ada026cee8310c01"
+    },
+    {
+      "path": "support/mcp/dns-summary.json",
+      "bytes": 3628,
+      "sha256": "5860029faa0a98fd409f146204936315346f0d157bc6f92dde5eb5530d32cbb5"
+    },
+    {
+      "path": "support/mcp/join-conn-ids.json",
+      "bytes": 6013,
+      "sha256": "150501c6deaed2d6941a8bc12f2993e4583b72e05d17479ff9f6d8aeba8c7387"
+    },
+    {
+      "path": "support/mcp/lateral-payloads.json",
+      "bytes": 41981,
+      "sha256": "242740322a3ed8ef593eb4dc1a66f335c003f7aaab476ac22c9d7611beb54b9f"
+    },
+    {
+      "path": "support/mcp/pcap-upload.json",
+      "bytes": 6852,
+      "sha256": "fc6e62d0590ff4ed5fd1bdb36bcec0f3aa08ba4102d9cb4a70ffaca349ba1234"
+    },
+    {
+      "path": "support/mcp/upload-0.json",
+      "bytes": 51996,
+      "sha256": "5f95b7756f9962ef0801369c390264b3d0b845b082d6af2666e7d02e0fa18055"
+    },
+    {
+      "path": "support/mcp/upload-1.json",
+      "bytes": 51996,
+      "sha256": "cb6ca5023e6c8e097df3548b7bbbfa2265fb08ebe9861ca9b4116a53662f3919"
+    },
+    {
+      "path": "support/mcp/upload-2.json",
+      "bytes": 52020,
+      "sha256": "6ae7438584fd5913468117df1f336a56b2d237bef2e0acf09f741f07d853b6f7"
+    },
+    {
+      "path": "evidence/coherent-course-100k.pcap.zip",
+      "bytes": 14391965,
+      "sha256": "8183ef3ae5443ca9e82184a931b6940cab004acf706d3a13c46e85c5acc88686"
+    },
+    {
+      "path": "evidence/coherent-pcap-zeek-dns-120.zip",
+      "bytes": 3613,
+      "sha256": "7d03f33730d8fb2df4a7156dbdd9ec17c665c567ca6d670579291d39103a1e0b"
+    },
+    {
+      "path": "evidence/coherent-pcap-zeek-conn-100k.zip",
+      "bytes": 2875097,
+      "sha256": "e0e8d148ed2c636e001513b3b4335a4c277e1e445dc366a86d532839e4c66d1f"
+    },
+    {
+      "path": "evidence/coherent-pcap-netflow-v5-100k.zip",
+      "bytes": 1514255,
+      "sha256": "dd5b73d73522f25628ced828d1710436057f99f2e462ee747989fa3c7c5ad304"
+    },
+    {
+      "path": "evidence/coherent-pcap-suricata-alerts-340.zip",
+      "bytes": 4896,
+      "sha256": "ad8122ad28d0272354a915787d3e7d80a155e99150766d28b403a229017b781e"
+    },
+    {
+      "path": "evidence/coherent-pcap-fortigate-100k.zip",
+      "bytes": 3379957,
+      "sha256": "4f230263c478c119575872e5502d0aa2cd1d9529e35f1289326ce6a86b843f84"
+    }
+  ]
+}

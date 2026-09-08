@@ -1,0 +1,222 @@
+{
+  "tool": "/usr/sbin/tcpdump",
+  "target_packets": 1255,
+  "directions": {
+    "10.70.0.66 -> 10.70.0.53": {
+      "packets": 120,
+      "payload_bytes": 5880
+    },
+    "10.70.0.53 -> 10.70.0.66": {
+      "packets": 120,
+      "payload_bytes": 7800
+    },
+    "10.70.0.66 -> 203.0.113.66": {
+      "packets": 480,
+      "payload_bytes": 6010330
+    },
+    "203.0.113.66 -> 10.70.0.66": {
+      "packets": 360,
+      "payload_bytes": 240
+    },
+    "10.70.0.66 -> 10.70.1.1": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.1 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.2": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.2 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.3": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.3 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.4": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.4 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.5": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.5 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.6": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.6 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.7": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.7 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.8": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.8 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.9": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.9 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.10": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.10 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.11": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.11 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.12": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.12 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.13": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.13 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.14": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.14 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.15": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.15 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.16": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.16 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.17": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.17 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.18": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.18 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.19": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.19 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.20": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.20 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.21": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.21 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.22": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.22 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.23": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.23 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.24": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.24 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    },
+    "10.70.0.66 -> 10.70.1.25": {
+      "packets": 4,
+      "payload_bytes": 35
+    },
+    "10.70.1.25 -> 10.70.0.66": {
+      "packets": 3,
+      "payload_bytes": 2
+    }
+  }
+}

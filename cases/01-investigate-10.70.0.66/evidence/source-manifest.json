@@ -1,0 +1,75 @@
+{
+  "schema": "dfir-case-evidence-v1",
+  "case_id": "01-investigate-10.70.0.66",
+  "sample_directory": "../../implementation/sample-data",
+  "input_root": "/student/agentic-siem/incident-lab/input",
+  "source_relationship": "The supplied training views derive from one synthetic parent PCAP; they are not independent appliances.",
+  "sources": [
+    {
+      "id": "F1",
+      "archive": "coherent-course-100k.pcap.zip",
+      "member": "coherent-course-100k.pcap",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+      "bytes": 60853574,
+      "sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+      "analysis": null,
+      "records": null,
+      "archive_sha256": "8183ef3ae5443ca9e82184a931b6940cab004acf706d3a13c46e85c5acc88686"
+    },
+    {
+      "id": "F2",
+      "archive": "coherent-pcap-zeek-dns-120.zip",
+      "member": "coherent-pcap-zeek-dns-120.jsonl",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+      "bytes": 52043,
+      "sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "analysis": "dns",
+      "records": 120,
+      "archive_sha256": "7d03f33730d8fb2df4a7156dbdd9ec17c665c567ca6d670579291d39103a1e0b"
+    },
+    {
+      "id": "F3",
+      "archive": "coherent-pcap-zeek-conn-100k.zip",
+      "member": "coherent-pcap-zeek-conn-100k.jsonl",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+      "bytes": 37114964,
+      "sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+      "analysis": "lateral",
+      "records": 100000,
+      "archive_sha256": "e0e8d148ed2c636e001513b3b4335a4c277e1e445dc366a86d532839e4c66d1f"
+    },
+    {
+      "id": "F4",
+      "archive": "coherent-pcap-netflow-v5-100k.zip",
+      "member": "coherent-pcap-netflow-v5-100k.jsonl",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+      "bytes": 54407704,
+      "sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+      "analysis": "netflow",
+      "records": 100000,
+      "archive_sha256": "dd5b73d73522f25628ced828d1710436057f99f2e462ee747989fa3c7c5ad304"
+    },
+    {
+      "id": "F5",
+      "archive": "coherent-pcap-suricata-alerts-340.zip",
+      "member": "coherent-pcap-suricata-alerts-340.jsonl",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+      "bytes": 154267,
+      "sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+      "analysis": "ids",
+      "records": 340,
+      "archive_sha256": "ad8122ad28d0272354a915787d3e7d80a155e99150766d28b403a229017b781e"
+    },
+    {
+      "id": "F6",
+      "archive": "coherent-pcap-fortigate-100k.zip",
+      "member": "coherent-pcap-fortigate-100k.log",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+      "bytes": 47539569,
+      "sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+      "analysis": "firewall",
+      "records": 100000,
+      "archive_sha256": "4f230263c478c119575872e5502d0aa2cd1d9529e35f1289326ce6a86b843f84"
+    }
+  ]
+}

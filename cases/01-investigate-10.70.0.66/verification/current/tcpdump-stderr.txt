@@ -1,0 +1,1 @@
+reading from file /private/tmp/network-forensics-1066-recheck-final-20260908/evidence/coherent-course-100k.pcap, link-type EN10MB (Ethernet)

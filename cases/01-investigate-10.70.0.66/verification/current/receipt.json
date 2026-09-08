@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-09-08T11:18:47.649589+00:00",
+  "method": "Deterministic raw-file measurements only; Codex makes semantic judgments separately",
+  "model_calls": 0,
+  "mcp_calls": 0,
+  "archives_verified": 6,
+  "source_manifest_sha256": "f87a71cf860628eda39cb0201b01f958b06ef2c1f70e44b11efc9aa4088fe034",
+  "reader_sha256": "f709d9074940bbbaea203a8b15cb824fa15df6cd1714ab911ffc93169b705f4e",
+  "measurements_sha256": "952fa44a2114fcc71bb75ed8901566b08acc0b1037513516d47676bac0f2fe6b",
+  "prior_measurements_equal": true,
+  "tcpdump_available": true,
+  "commands": [
+    [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/private/tmp/network-forensics-1066-recheck-final-20260908/check_raw.py"
+    ],
+    [
+      "/usr/sbin/tcpdump",
+      "-nn",
+      "-tt",
+      "-q",
+      "-r",
+      "/private/tmp/network-forensics-1066-recheck-final-20260908/evidence/coherent-course-100k.pcap",
+      "host 10.70.0.66"
+    ]
+  ],
+  "tcpdump_packet_lines": 1255,
+  "tcpdump_matches_prior": true
+}
