@@ -10,8 +10,12 @@
 
 - [student-1: เตรียม HTTPS และสถานะการเปิดใช้งาน](2026-09-08-006-student-1-https.md)
 
+- [student-1: เปิด HTTPS และตรวจ MCP จากภายนอก](2026-09-08-007-student-1-public-verification.md)
+
 ## ผลตรวจ
 
 - [สรุป deployment และข้อจำกัดที่ยังเหลือ](evidence/2026-09-08-deployment-summary.json)
 - [ผลตรวจ MCP/HDFS/Spark จริง](evidence/2026-09-08-mcp-verification.json)
 - [ผลตรวจคิวและยกเลิกงาน](evidence/2026-09-08-queue-verification.json)
+
+- [ผลตรวจ HTTPS/MCP จริงจากภายนอก VM](evidence/2026-09-08-public-mcp-verification.json)

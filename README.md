@@ -38,4 +38,6 @@
 ## การติดตั้งและกิจกรรม Cloud
 
 - [บันทึกกิจกรรม GCP](cloud-activities/README.md)
-- [ชุดติดตั้ง container สำหรับ NF-01 — ผ่านการทดสอบภายใน; HTTPS รอเปิดพอร์ต](platform/nf01/README.md)
+- [ชุดติดตั้ง container สำหรับ NF-01 — HTTPS MCP ผ่านการทดสอบจากภายนอกแล้ว](platform/nf01/README.md)
+
+- [วิธีเชื่อม Claude Desktop กับ NF-01 MCP](platform/nf01/CLAUDE-DESKTOP.md)

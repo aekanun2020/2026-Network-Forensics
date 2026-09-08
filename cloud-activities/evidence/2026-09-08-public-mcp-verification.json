@@ -1,0 +1,544 @@
+{
+  "started_at": "2026-09-08T15:20:56.383562+00:00",
+  "endpoint": "https://34-142-187-162.sslip.io/mcp",
+  "client_location": "operator Mac outside GCP VM, direct public HTTPS",
+  "sdk_version": "1.30.0",
+  "model_calls": 0,
+  "checks": [
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap"
+      },
+      "is_error": false,
+      "seconds": 2.963,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "bytes": 60853574,
+        "sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl"
+      },
+      "is_error": false,
+      "seconds": 2.564,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "bytes": 52043,
+        "sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl"
+      },
+      "is_error": false,
+      "seconds": 2.652,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "bytes": 37114964,
+        "sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl"
+      },
+      "is_error": false,
+      "seconds": 2.771,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "bytes": 54407704,
+        "sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl"
+      },
+      "is_error": false,
+      "seconds": 2.456,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "bytes": 154267,
+        "sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log"
+      },
+      "is_error": false,
+      "seconds": 2.706,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "bytes": 47539569,
+        "sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_read_lines",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "start_line": 1,
+        "limit": 1
+      },
+      "is_error": false,
+      "seconds": 0.187,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "file_bytes": 52043,
+        "lines": [
+          {
+            "line": 1,
+            "text": "{\"ts\":1787529600.0,\"uid\":\"C23Z1U11E2atSWbamf\",\"id.orig_h\":\"10.70.0.66\",\"id.orig_p\":40000,\"id.resp_h\":\"10.70.0.53\",\"id.resp_p\":53,\"proto\":\"udp\",\"trans_id\":1000,\"rtt\":0.0009999275207519531,\"query\":\"c2-course.evidence.example.test\",\"qclass\":1,\"qclass_name\":\"C_INTERNET\",\"qtype\":1,\"qtype_name\":\"A\",\"rcode\":0,\"rcode_name\":\"NOERROR\",\"AA\":false,\"TC\":false,\"RD\":true,\"RA\":true,\"Z\":0,\"answers\":[\"203.0.113.66\"],\"TTLs\":[60.0],\"rejected\":false}"
+          }
+        ],
+        "next_line": 2,
+        "reached_eof": false,
+        "line_numbers_are_one_based": true
+      }
+    },
+    {
+      "tool": "hdfs_pcap_packets",
+      "arguments": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "display_filter": "frame.number == 1",
+        "limit": 1,
+        "payload_bytes": 0
+      },
+      "is_error": false,
+      "seconds": 15.271,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "file_bytes": 60853574,
+        "source_sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+        "display_filter": "frame.number == 1",
+        "matching_packets": 1,
+        "packets": [
+          {
+            "frame.number": "1",
+            "frame.time_epoch": "1787529600.000000000",
+            "ip.src": "10.70.0.66",
+            "ip.dst": "10.70.0.53",
+            "tcp.srcport": "",
+            "tcp.dstport": "",
+            "udp.srcport": "40000",
+            "udp.dstport": "53",
+            "tcp.len": "",
+            "dns.qry.name": "c2-course.evidence.example.test",
+            "dns.a": "",
+            "_ws.col.Protocol": "DNS",
+            "tls.record.content_type": "",
+            "tls.handshake.type": "",
+            "packet_number": 1,
+            "utc": "2026-08-24T00:00:00+00:00",
+            "payload_length": 0,
+            "payload_hex": "",
+            "payload_text": "",
+            "payload_truncated": false,
+            "protocol_observation": "not_established"
+          }
+        ],
+        "samples_truncated": false,
+        "complete_scan": true,
+        "dissector": "tshark",
+        "interpretation": "Observed packets only; no compromise verdict"
+      }
+    },
+    {
+      "tool": "spark_save_job",
+      "arguments": {
+        "filename": "public_https_verify_20260908T152140.py",
+        "code": "from pyspark.sql import SparkSession\nspark=SparkSession.builder.appName(\"NF01-public-HTTPS-check\").getOrCreate()\nprint(\"NF01_ROWS=\"+str(spark.read.text(\"hdfs://namenode:9000/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl\").count()))\nspark.stop()\n"
+      },
+      "is_error": false,
+      "seconds": 0.166,
+      "result": {
+        "filename": "public_https_verify_20260908T152140.py",
+        "bytes": 278,
+        "sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "saved": true
+      }
+    },
+    {
+      "tool": "spark_validate_job",
+      "arguments": {
+        "filename": "public_https_verify_20260908T152140.py"
+      },
+      "is_error": false,
+      "seconds": 0.059,
+      "result": {
+        "filename": "public_https_verify_20260908T152140.py",
+        "valid_python": true,
+        "imports_pyspark": true
+      }
+    },
+    {
+      "tool": "spark_submit_job",
+      "arguments": {
+        "filename": "public_https_verify_20260908T152140.py",
+        "expected_sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "conf": {
+          "spark.driver.memory": "1g",
+          "spark.cores.max": "1",
+          "spark.executor.cores": "1",
+          "spark.executor.memory": "512m"
+        }
+      },
+      "is_error": false,
+      "seconds": 0.06,
+      "result": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "application": "public_https_verify_20260908T152140.py",
+        "code_snapshot": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8.job.py",
+        "code_sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "request_sha256": "1fbff7960de7d0e5d1782d18e80e791f7717a2b309f1b754d617a4ba808dc6ca",
+        "idempotency_key": null,
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "QUEUED",
+        "pid": null,
+        "started_at": "2026-09-08T15:21:40.522400+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "deduplicated": false
+      }
+    },
+    {
+      "tool": "spark_job_status",
+      "arguments": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8"
+      },
+      "is_error": false,
+      "seconds": 0.074,
+      "result": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "application": "public_https_verify_20260908T152140.py",
+        "code_snapshot": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8.job.py",
+        "code_sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "request_sha256": "1fbff7960de7d0e5d1782d18e80e791f7717a2b309f1b754d617a4ba808dc6ca",
+        "idempotency_key": null,
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "RUNNING",
+        "pid": 4996,
+        "started_at": "2026-09-08T15:21:40.522400+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "launched_at": "2026-09-08T15:21:40.525074+00:00"
+      }
+    },
+    {
+      "tool": "spark_job_status",
+      "arguments": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8"
+      },
+      "is_error": false,
+      "seconds": 0.099,
+      "result": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "application": "public_https_verify_20260908T152140.py",
+        "code_snapshot": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8.job.py",
+        "code_sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "request_sha256": "1fbff7960de7d0e5d1782d18e80e791f7717a2b309f1b754d617a4ba808dc6ca",
+        "idempotency_key": null,
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "RUNNING",
+        "pid": 4996,
+        "started_at": "2026-09-08T15:21:40.522400+00:00",
+        "finished_at": null,
+        "exit_code": null,
+        "launched_at": "2026-09-08T15:21:40.525074+00:00"
+      }
+    },
+    {
+      "tool": "spark_job_status",
+      "arguments": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8"
+      },
+      "is_error": false,
+      "seconds": 0.067,
+      "result": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "application": "public_https_verify_20260908T152140.py",
+        "code_snapshot": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8.job.py",
+        "code_sha256": "7c705b554db5aaf72d5fa1d44a1e8cb765160df36f98e6723e632f3c73933d17",
+        "request_sha256": "1fbff7960de7d0e5d1782d18e80e791f7717a2b309f1b754d617a4ba808dc6ca",
+        "idempotency_key": null,
+        "boot_id": "de676372-061b-4c3d-8c83-e568f402edd6",
+        "status": "SUCCEEDED",
+        "pid": 4996,
+        "started_at": "2026-09-08T15:21:40.522400+00:00",
+        "finished_at": "2026-09-08T15:21:52.754952+00:00",
+        "exit_code": 0,
+        "launched_at": "2026-09-08T15:21:40.525074+00:00"
+      }
+    },
+    {
+      "tool": "spark_job_logs",
+      "arguments": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "tail_lines": 100
+      },
+      "is_error": false,
+      "seconds": 0.1,
+      "result": {
+        "job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+        "lines": [
+          "26/09/08 15:21:44 INFO SparkEnv: Registering MapOutputTracker",
+          "26/09/08 15:21:44 INFO SparkEnv: Registering BlockManagerMaster",
+          "26/09/08 15:21:44 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information",
+          "26/09/08 15:21:44 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up",
+          "26/09/08 15:21:44 INFO SparkEnv: Registering BlockManagerMasterHeartbeat",
+          "26/09/08 15:21:44 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-62472112-1942-4d17-9a54-823c1e33c995",
+          "26/09/08 15:21:44 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB",
+          "26/09/08 15:21:44 INFO SparkEnv: Registering OutputCommitCoordinator",
+          "26/09/08 15:21:44 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI",
+          "26/09/08 15:21:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.",
+          "26/09/08 15:21:44 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...",
+          "26/09/08 15:21:44 INFO TransportClientFactory: Successfully created connection to spark-master/172.18.0.6:7077 after 25 ms (0 ms spent in bootstraps)",
+          "26/09/08 15:21:44 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20260908152144-0004",
+          "26/09/08 15:21:44 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20260908152144-0004/0 on worker-20260908144455-172.18.0.7-43351 (172.18.0.7:43351) with 1 core(s)",
+          "26/09/08 15:21:44 INFO StandaloneSchedulerBackend: Granted executor ID app-20260908152144-0004/0 on hostPort 172.18.0.7:43351 with 1 core(s), 512.0 MiB RAM",
+          "26/09/08 15:21:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41839.",
+          "26/09/08 15:21:44 INFO NettyBlockTransferService: Server created on spark-hdfs-mcp:41839",
+          "26/09/08 15:21:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy",
+          "26/09/08 15:21:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, spark-hdfs-mcp, 41839, None)",
+          "26/09/08 15:21:44 INFO BlockManagerMasterEndpoint: Registering block manager spark-hdfs-mcp:41839 with 434.4 MiB RAM, BlockManagerId(driver, spark-hdfs-mcp, 41839, None)",
+          "26/09/08 15:21:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, spark-hdfs-mcp, 41839, None)",
+          "26/09/08 15:21:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, spark-hdfs-mcp, 41839, None)",
+          "26/09/08 15:21:44 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20260908152144-0004/0 is now RUNNING",
+          "26/09/08 15:21:45 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0",
+          "26/09/08 15:21:45 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.",
+          "26/09/08 15:21:45 INFO SharedState: Warehouse path is 'file:/opt/spark-hdfs-mcp/spark-warehouse'.",
+          "26/09/08 15:21:46 INFO InMemoryFileIndex: It took 111 ms to list leaf files for 1 paths.",
+          "26/09/08 15:21:48 INFO FileSourceStrategy: Pushed Filters: ",
+          "26/09/08 15:21:48 INFO FileSourceStrategy: Post-Scan Filters: ",
+          "26/09/08 15:21:48 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.7:39808) with ID 0,  ResourceProfileId 0",
+          "26/09/08 15:21:48 INFO BlockManagerMasterEndpoint: Registering block manager 172.18.0.7:34129 with 127.2 MiB RAM, BlockManagerId(0, 172.18.0.7, 34129, None)",
+          "26/09/08 15:21:49 INFO CodeGenerator: Code generated in 213.440175 ms",
+          "26/09/08 15:21:49 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 200.0 KiB, free 434.2 MiB)",
+          "26/09/08 15:21:49 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 434.2 MiB)",
+          "26/09/08 15:21:49 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hdfs-mcp:41839 (size: 34.8 KiB, free: 434.4 MiB)",
+          "26/09/08 15:21:49 INFO SparkContext: Created broadcast 0 from count at NativeMethodAccessorImpl.java:0",
+          "26/09/08 15:21:49 INFO FileSourceScanExec: Planning scan with bin packing, max size: 20654634 bytes, open cost is considered as scanning 4194304 bytes.",
+          "26/09/08 15:21:49 INFO DAGScheduler: Registering RDD 3 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0",
+          "26/09/08 15:21:49 INFO DAGScheduler: Got map stage job 0 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions",
+          "26/09/08 15:21:49 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0)",
+          "26/09/08 15:21:49 INFO DAGScheduler: Parents of final stage: List()",
+          "26/09/08 15:21:49 INFO DAGScheduler: Missing parents: List()",
+          "26/09/08 15:21:49 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0), which has no missing parents",
+          "26/09/08 15:21:49 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 15.6 KiB, free 434.2 MiB)",
+          "26/09/08 15:21:49 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.4 KiB, free 434.1 MiB)",
+          "26/09/08 15:21:49 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hdfs-mcp:41839 (size: 7.4 KiB, free: 434.4 MiB)",
+          "26/09/08 15:21:49 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1611",
+          "26/09/08 15:21:49 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))",
+          "26/09/08 15:21:49 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks resource profile 0",
+          "26/09/08 15:21:49 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (172.18.0.7, executor 0, partition 0, ANY, 9654 bytes) ",
+          "26/09/08 15:21:49 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.18.0.7:34129 (size: 7.4 KiB, free: 127.2 MiB)",
+          "26/09/08 15:21:50 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.18.0.7:34129 (size: 34.8 KiB, free: 127.2 MiB)",
+          "26/09/08 15:21:51 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (172.18.0.7, executor 0, partition 1, ANY, 9654 bytes) ",
+          "26/09/08 15:21:51 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2154 ms on 172.18.0.7 (executor 0) (1/2)",
+          "26/09/08 15:21:51 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 190 ms on 172.18.0.7 (executor 0) (2/2)",
+          "26/09/08 15:21:51 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool ",
+          "26/09/08 15:21:51 INFO DAGScheduler: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0) finished in 2.449 s",
+          "26/09/08 15:21:51 INFO DAGScheduler: looking for newly runnable stages",
+          "26/09/08 15:21:51 INFO DAGScheduler: running: Set()",
+          "26/09/08 15:21:51 INFO DAGScheduler: waiting: Set()",
+          "26/09/08 15:21:51 INFO DAGScheduler: failed: Set()",
+          "26/09/08 15:21:51 INFO CodeGenerator: Code generated in 15.865368 ms",
+          "26/09/08 15:21:51 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0",
+          "26/09/08 15:21:51 INFO DAGScheduler: Got job 1 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions",
+          "26/09/08 15:21:51 INFO DAGScheduler: Final stage: ResultStage 2 (count at NativeMethodAccessorImpl.java:0)",
+          "26/09/08 15:21:51 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)",
+          "26/09/08 15:21:51 INFO DAGScheduler: Missing parents: List()",
+          "26/09/08 15:21:51 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0), which has no missing parents",
+          "26/09/08 15:21:51 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 12.5 KiB, free 434.1 MiB)",
+          "26/09/08 15:21:51 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 434.1 MiB)",
+          "26/09/08 15:21:51 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hdfs-mcp:41839 (size: 5.9 KiB, free: 434.4 MiB)",
+          "26/09/08 15:21:51 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1611",
+          "26/09/08 15:21:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))",
+          "26/09/08 15:21:51 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0",
+          "26/09/08 15:21:51 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (172.18.0.7, executor 0, partition 0, NODE_LOCAL, 9003 bytes) ",
+          "26/09/08 15:21:51 INFO BlockManagerInfo: Removed broadcast_1_piece0 on spark-hdfs-mcp:41839 in memory (size: 7.4 KiB, free: 434.4 MiB)",
+          "26/09/08 15:21:51 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.18.0.7:34129 in memory (size: 7.4 KiB, free: 127.2 MiB)",
+          "26/09/08 15:21:52 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.18.0.7:34129 (size: 5.9 KiB, free: 127.2 MiB)",
+          "26/09/08 15:21:52 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.18.0.7:39808",
+          "26/09/08 15:21:52 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 276 ms on 172.18.0.7 (executor 0) (1/1)",
+          "26/09/08 15:21:52 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool ",
+          "26/09/08 15:21:52 INFO DAGScheduler: ResultStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.324 s",
+          "26/09/08 15:21:52 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job",
+          "26/09/08 15:21:52 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished",
+          "26/09/08 15:21:52 INFO DAGScheduler: Job 1 finished: count at NativeMethodAccessorImpl.java:0, took 0.341252 s",
+          "NF01_ROWS=100000",
+          "26/09/08 15:21:52 INFO SparkContext: SparkContext is stopping with exitCode 0.",
+          "26/09/08 15:21:52 INFO SparkUI: Stopped Spark web UI at http://spark-hdfs-mcp:4040",
+          "26/09/08 15:21:52 INFO StandaloneSchedulerBackend: Shutting down all executors",
+          "26/09/08 15:21:52 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down",
+          "26/09/08 15:21:52 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!",
+          "26/09/08 15:21:52 INFO MemoryStore: MemoryStore cleared",
+          "26/09/08 15:21:52 INFO BlockManager: BlockManager stopped",
+          "26/09/08 15:21:52 INFO BlockManagerMaster: BlockManagerMaster stopped",
+          "26/09/08 15:21:52 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!",
+          "26/09/08 15:21:52 INFO SparkContext: Successfully stopped SparkContext",
+          "26/09/08 15:21:52 INFO ShutdownHookManager: Shutdown hook called",
+          "26/09/08 15:21:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-0c6405c5-c096-4ee7-bb23-bd3c569b468b",
+          "26/09/08 15:21:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-0c6405c5-c096-4ee7-bb23-bd3c569b468b/pyspark-d6568b9c-b1da-4d95-bc20-dae58d968a0f",
+          "26/09/08 15:21:52 INFO ShutdownHookManager: Deleting directory /tmp/spark-5344abf6-9504-4782-a48f-19002483b3ae"
+        ]
+      }
+    }
+  ],
+  "status": "PASS",
+  "tls": {
+    "version": "TLSv1.3",
+    "cipher": [
+      "TLS_AES_128_GCM_SHA256",
+      "TLSv1.3",
+      128
+    ],
+    "certificate": {
+      "subject": [
+        [
+          [
+            "commonName",
+            "34-142-187-162.sslip.io"
+          ]
+        ]
+      ],
+      "issuer": [
+        [
+          [
+            "countryName",
+            "US"
+          ]
+        ],
+        [
+          [
+            "organizationName",
+            "Let's Encrypt"
+          ]
+        ],
+        [
+          [
+            "commonName",
+            "YE2"
+          ]
+        ]
+      ],
+      "version": 3,
+      "serialNumber": "05A0F3C6ADC6AE8C4367071D2BEEA056B7A1",
+      "notBefore": "Sep  8 14:21:04 2026 GMT",
+      "notAfter": "Dec  7 14:21:03 2026 GMT",
+      "subjectAltName": [
+        [
+          "DNS",
+          "34-142-187-162.sslip.io"
+        ]
+      ],
+      "caIssuers": [
+        "http://ye2.i.lencr.org/"
+      ],
+      "crlDistributionPoints": [
+        "http://ye2.c.lencr.org/34.crl"
+      ]
+    },
+    "certificate_sha256": "51231174da57a6e03c46b7dd0c6c4a201e75be53ad03dd4143eecca37a0b699e",
+    "trust_and_hostname_verified": true
+  },
+  "server": {
+    "meta": null,
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "experimental": {},
+      "logging": null,
+      "prompts": {
+        "listChanged": false
+      },
+      "resources": {
+        "subscribe": false,
+        "listChanged": false
+      },
+      "tools": {
+        "listChanged": false
+      },
+      "completions": null,
+      "tasks": null
+    },
+    "serverInfo": {
+      "name": "Spark and HDFS",
+      "title": null,
+      "version": "1.30.0",
+      "websiteUrl": null,
+      "icons": null
+    },
+    "instructions": "Use spark_save_job then spark_validate_job before spark_submit_job. Use spark_read_job and spark_replace_job_text for small, auditable repairs. Poll spark_job_status and inspect spark_job_logs on failure. HDFS tools accept virtual paths relative to the restricted /mcp root, such as /lab/input.log, and return physical HDFS paths such as /mcp/lab/input.log. Pass the returned physical path unchanged to Spark; never pass the original virtual path to Spark or pass a returned /mcp path back to an HDFS tool. Spark files and settings are allowlisted. Never assume a submitted job succeeded until its status is SUCCEEDED. Jobs first enter QUEUED; at most two execute concurrently and eight are admitted. Poll status while queued; do not resubmit duplicate work."
+  },
+  "tools": [
+    "spark_save_job",
+    "spark_read_job",
+    "spark_replace_job_text",
+    "spark_validate_job",
+    "spark_submit_job",
+    "spark_job_status",
+    "spark_job_logs",
+    "spark_cancel_job",
+    "spark_list_jobs",
+    "spark_cluster_status",
+    "hdfs_list",
+    "hdfs_stat",
+    "hdfs_mkdir",
+    "hdfs_write_text",
+    "hdfs_read_text",
+    "hdfs_delete",
+    "hdfs_import_file",
+    "hdfs_cluster_status",
+    "hdfs_sha256",
+    "hdfs_read_lines",
+    "hdfs_query_records",
+    "hdfs_correlate_records",
+    "hdfs_pcap_packets"
+  ],
+  "four_concurrent_sessions": [
+    {
+      "session": 1,
+      "f2_sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "passed": true
+    },
+    {
+      "session": 2,
+      "f2_sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "passed": true
+    },
+    {
+      "session": 3,
+      "f2_sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "passed": true
+    },
+    {
+      "session": 4,
+      "f2_sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+      "passed": true
+    }
+  ],
+  "spark_job_id": "5e2f8aa0-d0a5-472a-8528-3282f7598ab8",
+  "finished_at": "2026-09-08T15:21:52.899046+00:00"
+}
