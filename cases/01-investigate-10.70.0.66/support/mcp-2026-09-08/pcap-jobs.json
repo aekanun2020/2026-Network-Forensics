@@ -1,0 +1,1 @@
+[{"id": "F1-full66-v2", "tool": "hdfs_pcap_packets", "args": {"path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap", "display_filter": "ip.addr == 10.70.0.66", "limit": 2000, "payload_bytes": 256}}]

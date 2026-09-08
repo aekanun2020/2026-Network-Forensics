@@ -116,5 +116,15 @@
       "bytes": 3379957,
       "sha256": "4f230263c478c119575872e5502d0aa2cd1d9529e35f1289326ce6a86b843f84"
     }
+  ],
+  "additional_answer_archives": [
+    {
+      "answer": "AGENT-ANSWER-MCP-2026-09-08.md",
+      "original_answer": "support/agent-answer-mcp-2026-09-08-original.txt",
+      "provenance": "support/mcp-2026-09-08/provenance.json",
+      "question_scope": "Actual user message; not the entire canonical NF-01-v2 QUESTION.md",
+      "execution": "HDFS tools via Spark and HDFS MCP; TShark; no Spark job",
+      "archive_is_new_investigation": false
+    }
   ]
 }

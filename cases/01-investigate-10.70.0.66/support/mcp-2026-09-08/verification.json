@@ -1,0 +1,10 @@
+{
+  "assessor": "Codex; script performs deterministic checks only",
+  "pcap_frames_target": 1255,
+  "pcap_to_zeek_matching_tuples": 265,
+  "dns_to_conn_uid_matches": 120,
+  "netflow_to_conn_tuple_byte_packet_endtime_matches": 265,
+  "fortigate_to_conn_parentuid_tuple_byte_packet_matches": 265,
+  "fortigate_clock_text_matches_zeek_utc_text": 265,
+  "suricata_alert_to_frame_tuple_timestamp_matches": 340
+}

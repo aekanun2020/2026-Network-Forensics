@@ -4,14 +4,16 @@
 
 | โจทย์ | คำถาม | คำตอบของ agent | เฉลยที่ตรวจแล้ว |
 |---|---|---|---|
-| 01 — กิจกรรมของ 10.70.0.66 | [NF-01-v2: ชื่อไฟล์และ paths เต็มในคำถาม พร้อม hashes](cases/01-investigate-10.70.0.66/QUESTION.md) | [คำตอบ Codex ต่อโจทย์เดิม](cases/01-investigate-10.70.0.66/AGENT-ANSWER.md) | [คำตอบ cross-check ตาม NF-01-v2 — ไม่เรียก MCP](cases/01-investigate-10.70.0.66/CROSS-CHECK-NF-01-v2.md) |
+| 01 — กิจกรรมของ 10.70.0.66 | [NF-01-v2: ชื่อไฟล์และ paths เต็มในคำถาม พร้อม hashes](cases/01-investigate-10.70.0.66/QUESTION.md) | [คำตอบ Codex ผ่าน MCP — 8 ก.ย. 2026](cases/01-investigate-10.70.0.66/AGENT-ANSWER-MCP-2026-09-08.md) · [คำตอบเดิม](cases/01-investigate-10.70.0.66/AGENT-ANSWER.md) | [คำตอบ cross-check ตาม NF-01-v2 — ไม่เรียก MCP](cases/01-investigate-10.70.0.66/CROSS-CHECK-NF-01-v2.md) |
 
-ส่งโจทย์ NF-01-v2 ทั้งหน้าให้ agent เพื่อให้ได้รับขอบเขตเดียวกัน อ่าน [เหตุผลและหลักฐานรองรับการแก้โจทย์](cases/01-investigate-10.70.0.66/QUESTION-CHANGELOG.md) และ [โจทย์เดิม](cases/01-investigate-10.70.0.66/QUESTION-v1.md) คำตอบที่เก็บไว้ก่อนหน้านี้ยังไม่ใช่ผลรันของโจทย์ v2
+ส่งโจทย์ NF-01-v2 ทั้งหน้าให้ agent เพื่อให้ได้รับขอบเขตเดียวกัน อ่าน [เหตุผลและหลักฐานรองรับการแก้โจทย์](cases/01-investigate-10.70.0.66/QUESTION-CHANGELOG.md) และ [โจทย์เดิม](cases/01-investigate-10.70.0.66/QUESTION-v1.md) คำตอบเดิมยังเป็นผลต่อโจทย์เดิม ส่วนคำตอบผ่าน MCP วันที่ 8 กันยายน 2026 ใช้ [ข้อความโจทย์ที่ได้รับจริง](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/question-original.txt) ซึ่งมีคำถามและ paths หกไฟล์ แต่ไม่ได้รับ NF-01-v2 ครบทั้งหน้า จึงไม่จัดเป็นผลเปรียบเทียบ agent ด้วย input มาตรฐานเดียวกัน
 
 [คำตอบ cross-check รอบใหม่](cases/01-investigate-10.70.0.66/CROSS-CHECK-NF-01-v2.md) ใช้ผลอ่าน local files ใหม่โดยไม่เรียก MCP พร้อมตาราง claims/locators และ [หลักฐานวิธีตรวจซ้ำ](cases/01-investigate-10.70.0.66/verification/nf-01-v2/README.md) เป็นคำตอบอ้างอิงของเฟสตรวจ ไม่ใช่ผล investigator ผ่าน MCP; [คำตอบอ้างอิงเดิม](cases/01-investigate-10.70.0.66/REFERENCE-ANSWER.md) ยังคงอยู่แยกกัน
 
 ## เปิดหลักฐานและตรวจคำตอบ
 
+- [หลักฐานรอบคำตอบ MCP วันที่ 8 กันยายน 2026](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/README.md) — source inventory, queries/outputs, packets และข้อผิดพลาดที่เก็บไว้
+- [ต้นฉบับคำตอบ MCP รอบนี้](cases/01-investigate-10.70.0.66/support/agent-answer-mcp-2026-09-08-original.txt) และ [ทะเบียนที่มาของรอบนี้](cases/01-investigate-10.70.0.66/support/mcp-2026-09-08/provenance.json)
 - [สารบัญโจทย์ 01](cases/01-investigate-10.70.0.66/README.md)
 - [หลักฐาน ZIP หกไฟล์และ hashes](cases/01-investigate-10.70.0.66/evidence/README.md)
 - [ผลประเมินของ Codex และวิธี cross-check โดยไม่ใช้ MCP](cases/01-investigate-10.70.0.66/verification/README.md)

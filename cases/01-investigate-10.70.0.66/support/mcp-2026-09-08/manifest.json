@@ -1,0 +1,50 @@
+[
+  {
+    "id": "F1",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+    "bytes": 60853574,
+    "sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+    "complete": true
+  },
+  {
+    "id": "F2",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+    "bytes": 52043,
+    "sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+    "complete": true
+  },
+  {
+    "id": "F3",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+    "bytes": 37114964,
+    "sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+    "complete": true
+  },
+  {
+    "id": "F4",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+    "bytes": 54407704,
+    "sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+    "complete": true
+  },
+  {
+    "id": "F5",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+    "bytes": 154267,
+    "sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+    "complete": true
+  },
+  {
+    "id": "F6",
+    "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+    "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+    "bytes": 47539569,
+    "sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+    "complete": true
+  }
+]
