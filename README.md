@@ -2,6 +2,14 @@
 
 ชุดเรียนนี้แยก **คำตอบที่ agent ให้มา** ออกจาก **เฉลยที่ Codex ตรวจจาก raw evidence** ผู้เรียนควรทำโจทย์และตรึงคำตอบของตนก่อนเปิดเฉลย
 
+## หนังสือประกอบการเรียน
+
+- [จาก Network Traffic สู่หลักฐานการสืบสวน](book/network-forensics-and-log-analysis-th.md) — หนังสือภาษาไทยทั้งฉบับ พร้อมแผนภาพ Mermaid ครอบคลุม PCAP, Flow, Security Logs, Correlation และ SIEM
+
+คัดลอกทั้งไฟล์จาก [2026-Digital-Forensic ณ commit `6513b294d7da434e18123711e4410cbcc54017de`](https://github.com/aekanun2020/2026-Digital-Forensic/blob/6513b294d7da434e18123711e4410cbcc54017de/book/network-forensics-and-log-analysis-th.md) โดยคงเนื้อหา แผนภาพ และบรรณานุกรมตามต้นฉบับ ตัวอย่างในหนังสือเป็นสถานการณ์สมมติแยกจากหลักฐานและเฉลยของโจทย์ 01
+
+## โจทย์และคำตอบ
+
 | โจทย์ | คำถาม | คำตอบของ agent | เฉลยที่ตรวจแล้ว |
 |---|---|---|---|
 | 01 — กิจกรรมของ 10.70.0.66 | [NF-01-v2: ชื่อไฟล์และ paths เต็มในคำถาม พร้อม hashes](cases/01-investigate-10.70.0.66/QUESTION.md) | [คำตอบ Codex ผ่าน MCP — 8 ก.ย. 2026](cases/01-investigate-10.70.0.66/AGENT-ANSWER-MCP-2026-09-08.md) · [คำตอบเดิม](cases/01-investigate-10.70.0.66/AGENT-ANSWER.md) | [คำตอบ cross-check ตาม NF-01-v2 — ไม่เรียก MCP](cases/01-investigate-10.70.0.66/CROSS-CHECK-NF-01-v2.md) |
