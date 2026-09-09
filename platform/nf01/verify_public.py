@@ -1,5 +1,6 @@
 """Real external MCP/TLS verification. No model calls or certificate bypass."""
 import asyncio
+import argparse
 import hashlib
 import json
 import ssl
@@ -14,7 +15,7 @@ BASE = Path(__file__).resolve().parent
 HOST = '34-142-187-162.sslip.io'
 URL = f'https://{HOST}/mcp'
 ROWS = json.loads((BASE / 'evidence-inventory.json').read_text())['sources']
-OUT = BASE.parents[1] / 'cloud-activities/evidence/2026-09-08-public-mcp-verification.json'
+OUT = BASE.parents[1] / 'cloud-activities/evidence' / (datetime.now(timezone.utc).strftime('%Y-%m-%dT%H%M%SZ') + '-public-mcp-verification.json')
 AUDIT = {'started_at': datetime.now(timezone.utc).isoformat(), 'endpoint': URL,
          'client_location': 'operator Mac outside GCP VM, direct public HTTPS',
          'sdk_version': '1.30.0', 'model_calls': 0, 'checks': [], 'status': 'RUNNING'}
@@ -91,6 +92,12 @@ async def main():
     print('PASS: trusted public TLS, real MCP, six hashes, record/packet read, four sessions and Spark count=100000. No model calls.')
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=OUT, help='New audit JSON file; existing files are never overwritten.')
+    OUT = parser.parse_args().output.resolve()
+    if OUT.exists():
+        parser.error(f'Output already exists: {OUT}')
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     try:
         asyncio.run(main())
     except BaseException as error:

@@ -42,4 +42,4 @@
 
 - [วิธีเชื่อม Claude Desktop กับ NF-01 MCP](platform/nf01/CLAUDE-DESKTOP.md)
 
-- [สถานะกลับมาใช้งานวันที่ 9 กันยายน: Static IP ยืนยันแล้ว; รอ Start VM](cloud-activities/2026-09-09-001-student-1-restore.md)
+- [ผลตรวจกลับมาใช้งานหลัง Start VM วันที่ 9 กันยายน](cloud-activities/2026-09-09-001-student-1-restore.md)

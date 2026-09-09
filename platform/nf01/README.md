@@ -31,7 +31,8 @@ The service uses shared access without login, as explicitly requested. Per-user 
 
 - [Claude Desktop connection guide](CLAUDE-DESKTOP.md)
 - [Public MCP test script](verify_public.py)
-- [Public TLS/MCP verification evidence](../../cloud-activities/evidence/2026-09-08-public-mcp-verification.json)
+- [Initial public TLS/MCP verification evidence — 8 September](../../cloud-activities/evidence/2026-09-08-public-mcp-verification.json)
+- [Verification after VM restart — 9 September](../../cloud-activities/evidence/2026-09-09-public-mcp-verification.json)
 - [HTTPS Compose override with pinned Caddy image](compose.https.yml)
 - [TLS ingress configuration](Caddyfile)
 - [HTTPS preparation and consent record](../../cloud-activities/2026-09-08-006-student-1-https.md)
@@ -46,3 +47,5 @@ The endpoint forwards the original Streamable HTTP transport without protocol co
 To start the same service, use `sudo docker compose -f docker-compose.yml -f compose.lab.yml -f compose.https.yml up -d --no-deps https` in `/opt/nf01`. Caddy retains its certificate/account data in its named volumes. Do not copy private certificate keys or account material into this repository.
 
 The hostname uses external sslip.io DNS. On 2026-09-09, Codex verified the user's manual reservation: regional address `student-1` in `asia-southeast1` holds `34.142.187.162` and is attached to this VM. Retain that address resource and attachment to preserve the URL across VM stops. See the [restore record](../../cloud-activities/2026-09-09-001-student-1-restore.md). This deployment does not purchase a domain or a commercial certificate and does not create an additional VM or cloud load balancer. Existing GCP resource and network charges still apply.
+
+For repeat verification, run `verify_public.py --output /path/to/new-audit.json` with the real MCP SDK installed. Choose a new file; the script refuses to overwrite an existing audit. The default output uses a UTC timestamp.
