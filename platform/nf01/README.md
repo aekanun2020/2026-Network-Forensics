@@ -48,4 +48,6 @@ To start the same service, use `sudo docker compose -f docker-compose.yml -f com
 
 The hostname uses external sslip.io DNS. On 2026-09-09, Codex verified the user's manual reservation: regional address `student-1` in `asia-southeast1` holds `34.142.187.162` and is attached to this VM. Retain that address resource and attachment to preserve the URL across VM stops. See the [restore record](../../cloud-activities/2026-09-09-001-student-1-restore.md). This deployment does not purchase a domain or a commercial certificate and does not create an additional VM or cloud load balancer. Existing GCP resource and network charges still apply.
 
-For repeat verification, run `verify_public.py --output /path/to/new-audit.json` with the real MCP SDK installed. Choose a new file; the script refuses to overwrite an existing audit. The default output uses a UTC timestamp.
+For repeat verification, run `verify_public.py --host VERIFIED_VM_HOSTNAME --output /path/to/new-audit.json` with the real MCP SDK installed. Choose a new file; the script refuses to overwrite an existing audit. The default output uses a UTC timestamp.
+
+Three user-created clones (`student-2`, `student-3`, `student-4`) are awaiting the user-managed service-account correction before configuration. See the [clone activity record](../../cloud-activities/2026-09-09-002-configure-cloned-labs.md). No new learner URL is verified yet.

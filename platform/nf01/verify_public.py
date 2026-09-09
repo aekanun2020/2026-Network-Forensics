@@ -93,8 +93,13 @@ async def main():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--host', default=HOST, help='Verified target MCP hostname for this VM.')
     parser.add_argument('--output', type=Path, default=OUT, help='New audit JSON file; existing files are never overwritten.')
-    OUT = parser.parse_args().output.resolve()
+    args = parser.parse_args()
+    HOST = args.host
+    URL = f'https://{HOST}/mcp'
+    AUDIT['endpoint'] = URL
+    OUT = args.output.resolve()
     if OUT.exists():
         parser.error(f'Output already exists: {OUT}')
     OUT.parent.mkdir(parents=True, exist_ok=True)

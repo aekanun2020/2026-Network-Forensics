@@ -43,3 +43,5 @@
 - [วิธีเชื่อม Claude Desktop กับ NF-01 MCP](platform/nf01/CLAUDE-DESKTOP.md)
 
 - [ผลตรวจกลับมาใช้งานหลัง Start VM วันที่ 9 กันยายน](cloud-activities/2026-09-09-001-student-1-restore.md)
+
+- [การตั้งค่า VM กลุ่ม 2–4: รอแก้ Service Account ของเครื่องใหม่](cloud-activities/2026-09-09-002-configure-cloned-labs.md)

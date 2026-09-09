@@ -14,6 +14,8 @@
 
 - [student-1: ตรวจกลับมาใช้งานหลัง Start วันที่ 9 กันยายน](2026-09-09-001-student-1-restore.md)
 
+- [student-2 ถึง student-4: ตรวจเครื่องสำเนาและข้อขัดข้องในการเข้าเครื่อง](2026-09-09-002-configure-cloned-labs.md)
+
 ## ผลตรวจ
 
 - [สรุป deployment และข้อจำกัดที่ยังเหลือ](evidence/2026-09-08-deployment-summary.json)
