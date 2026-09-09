@@ -44,4 +44,6 @@
 
 - [ผลตรวจกลับมาใช้งานหลัง Start VM วันที่ 9 กันยายน](cloud-activities/2026-09-09-001-student-1-restore.md)
 
-- [การตั้งค่า VM กลุ่ม 2–4: รอแก้ Service Account ของเครื่องใหม่](cloud-activities/2026-09-09-002-configure-cloned-labs.md)
+- [บันทึกการตั้งค่า VM กลุ่ม 2–4](cloud-activities/2026-09-09-002-configure-cloned-labs.md)
+
+- [ตาราง MCP URL และคู่มือ Claude Desktop สำหรับทั้ง 4 กลุ่ม](platform/nf01/GROUP-ENDPOINTS.md)

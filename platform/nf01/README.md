@@ -50,4 +50,4 @@ The hostname uses external sslip.io DNS. On 2026-09-09, Codex verified the user'
 
 For repeat verification, run `verify_public.py --host VERIFIED_VM_HOSTNAME --output /path/to/new-audit.json` with the real MCP SDK installed. Choose a new file; the script refuses to overwrite an existing audit. The default output uses a UTC timestamp.
 
-Three user-created clones (`student-2`, `student-3`, `student-4`) are awaiting the user-managed service-account correction before configuration. See the [clone activity record](../../cloud-activities/2026-09-09-002-configure-cloned-labs.md). No new learner URL is verified yet.
+Three user-created clones (`student-2`, `student-3`, `student-4`) now have their own HTTPS configuration and TLS storage. See the [group endpoint directory](GROUP-ENDPOINTS.md) for per-VM URLs and verification outcomes, and the [clone activity record](../../cloud-activities/2026-09-09-002-configure-cloned-labs.md) for changes. The original student-1 was not modified.

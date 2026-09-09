@@ -14,7 +14,7 @@
 
 - [student-1: ตรวจกลับมาใช้งานหลัง Start วันที่ 9 กันยายน](2026-09-09-001-student-1-restore.md)
 
-- [student-2 ถึง student-4: ตรวจเครื่องสำเนาและข้อขัดข้องในการเข้าเครื่อง](2026-09-09-002-configure-cloned-labs.md)
+- [student-2 ถึง student-4: ตั้งค่า HTTPS และทดสอบเครื่องสำเนา](2026-09-09-002-configure-cloned-labs.md)
 
 ## ผลตรวจ
 
