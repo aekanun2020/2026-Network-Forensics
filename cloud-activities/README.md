@@ -12,6 +12,8 @@
 
 - [student-1: เปิด HTTPS และตรวจ MCP จากภายนอก](2026-09-08-007-student-1-public-verification.md)
 
+- [student-1: กลับมาใช้งานวันที่ 9 กันยายน — รอ Start VM](2026-09-09-001-student-1-restore.md)
+
 ## ผลตรวจ
 
 - [สรุป deployment และข้อจำกัดที่ยังเหลือ](evidence/2026-09-08-deployment-summary.json)

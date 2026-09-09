@@ -41,3 +41,5 @@
 - [ชุดติดตั้ง container สำหรับ NF-01 — HTTPS MCP ผ่านการทดสอบจากภายนอกแล้ว](platform/nf01/README.md)
 
 - [วิธีเชื่อม Claude Desktop กับ NF-01 MCP](platform/nf01/CLAUDE-DESKTOP.md)
+
+- [สถานะกลับมาใช้งานวันที่ 9 กันยายน: Static IP ยืนยันแล้ว; รอ Start VM](cloud-activities/2026-09-09-001-student-1-restore.md)
