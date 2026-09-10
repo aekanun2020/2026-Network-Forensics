@@ -1,0 +1,14 @@
+{
+  "destination": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+  "bytes": 10027488,
+  "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+  "destination_bytes": 10027488,
+  "destination_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+  "destination_verified": true,
+  "source_stable": true,
+  "overwrite": false,
+  "reused": true,
+  "virtual_path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+  "transport": "mcp-base64",
+  "staging_removed": true
+}

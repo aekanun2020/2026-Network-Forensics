@@ -46,4 +46,8 @@
 
 - [บันทึกการตั้งค่า VM กลุ่ม 2–4](cloud-activities/2026-09-09-002-configure-cloned-labs.md)
 
+- [student-1: นำเข้า psexec-hunt และเพิ่ม binary MCP upload](cloud-activities/2026-09-10-002-psexec-import-and-binary-mcp.md)
+
+- [MCP binary upload: source delta, client และผลทดสอบ](cloud-activities/changes/2026-09-10-binary-upload/README.md)
+
 </details>
