@@ -8,9 +8,8 @@
 
 ผู้ประเมินความหมายคือ **Codex ในรอบจัดวางนี้ วันที่ 8 กันยายน 2026** ตรวจคำตอบเดิมและผลอ่าน raw files ซ้ำด้วย [check_raw.py](check_raw.py) และ tcpdump ไม่เรียก MCP และไม่ใช้ external model/LLM judge สคริปต์วัดค่าเชิงกำหนดแน่นอน ไม่ได้สร้างข้อวินิจฉัยแทน Codex
 
-## แยกต้นฉบับ ผลเดิม และผลตรวจซ้ำ
+## ผลตรวจซ้ำที่เก็บไว้
 
-- [ผลวัดก่อนจัดวาง](prior/measurements.json), [integrity ก่อนจัดวาง](prior/integrity.json), [tcpdump ก่อนจัดวาง](prior/tcpdump-target.txt) และ [ยอด tcpdump เดิม](prior/tcpdump-counts.json) คัดลอกโดยไม่แก้และไม่เปลี่ยนให้เป็นผลใหม่
 - [ผลวัดซ้ำรอบจัดวาง](current/measurements.json), [สรุปการวัด](current/measurement-summary.json), [receipt ของรอบนี้](current/receipt.json), [tcpdump รอบนี้](current/tcpdump-target.txt) และ [stderr ของ tcpdump](current/tcpdump-stderr.txt) เกิดจากอ่าน ZIPs ที่วางใน repo นี้จริง
 
 รอบนี้ตรวจ archive/member hashes ผ่านทั้งหกไฟล์ ผล measurements.json เท่ากับผลก่อนหน้า และ tcpdump output ตรงกันทุก byte โดยมี 1,255 packet lines การเท่ากันเป็นผลเปรียบเทียบข้อมูล ไม่ใช่การตัดสินความถูกต้องเชิงความหมายแบบอัตโนมัติ
@@ -44,6 +43,8 @@
 python3 cases/01-investigate-10.70.0.66/verification/recheck.py \
   --output "$HOME/network-forensics-case01-recheck"
 ```
+
+โปรแกรมไม่อ่านหรือเปรียบเทียบกับผลใน prior/ ซึ่งถูกนำออกจาก repo แล้ว ผลเปรียบเทียบในบันทึกข้างต้นเป็นประวัติของวันที่ 8 กันยายน 2026
 
 โปรแกรมตรวจ ZIP/member SHA-256 ก่อนสร้าง output และไม่เขียนทับ directory เดิม ผลใหม่มี evidence/, check_raw.py, measurements.json, measurement-summary.json และ receipt.json ถ้ามี tcpdump จะมี output/stderr เพิ่ม ถ้าไม่มี tcpdump ให้ถือว่ายังไม่ได้ cross-check ด้วยเครื่องมือนั้น
 

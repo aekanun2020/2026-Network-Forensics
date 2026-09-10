@@ -57,18 +57,14 @@ def main():
         with (output/'tcpdump-target.txt').open('w') as stream, (output/'tcpdump-stderr.txt').open('w') as error:
             subprocess.run(command,stdout=stream,stderr=error,check=True)
         commands.append(command)
-    measurements=json.loads((output/'measurements.json').read_text())
-    previous=json.loads((HERE/'prior/measurements.json').read_text())
     receipt={'created_at_utc':datetime.now(timezone.utc).isoformat(),
              'method':'Deterministic raw-file measurements only; Codex makes semantic judgments separately',
              'model_calls':0,'mcp_calls':0,'archives_verified':len(verified),
              'source_manifest_sha256':digest(CASE/'evidence/source-manifest.json'),
              'reader_sha256':digest(HERE/'check_raw.py'),'measurements_sha256':digest(output/'measurements.json'),
-             'prior_measurements_equal':measurements==previous,
              'tcpdump_available':bool(tcpdump),'commands':commands}
     if tcpdump:
         receipt['tcpdump_packet_lines']=len((output/'tcpdump-target.txt').read_text().splitlines())
-        receipt['tcpdump_matches_prior']=digest(output/'tcpdump-target.txt')==digest(HERE/'prior/tcpdump-target.txt')
     (output/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt,indent=2))
 

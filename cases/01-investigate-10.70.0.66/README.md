@@ -16,7 +16,6 @@
 - [ผลวัดรอบ NF-01-v2 และวิธีทำซ้ำ](verification/nf-01-v2/README.md)
 - [หลักฐานหกไฟล์](evidence/README.md) และ [manifest ต้นฉบับ](evidence/source-manifest.json)
 - [ผล MCP ที่คำตอบเดิมอ้าง](support/mcp/) — ผลที่เก็บไว้จากรอบก่อน ไม่ได้เรียก MCP ใหม่ในการจัดวางครั้งนี้
-- [ผลวัดจากการตรวจเดิม](verification/prior/measurements.json), [integrity เดิม](verification/prior/integrity.json), [tcpdump เดิม](verification/prior/tcpdump-target.txt) และ [ยอด tcpdump เดิม](verification/prior/tcpdump-counts.json)
 - [ทะเบียน provenance และ SHA-256 ของไฟล์ที่คัดลอก](PROVENANCE.json)
 
 คำว่า “ถูกต้อง” ในเฉลยหมายถึงข้อสรุปที่หลักฐานหกไฟล์นี้รองรับ ภายใต้ขอบเขตที่ระบุ ไม่ใช่การรับรองว่าเกิด C2 การขโมยไฟล์ หรือการยึดเครื่องจริง
