@@ -1,1 +1,0 @@
-{"jsonrpc": "2.0", "id": "b60ce8f3-ba6e-49f2-9a5f-42bc9d6739f7", "result": {"content": [{"type": "text", "text": "Error executing tool hdfs_pcap_packets: limit 1..50; payload_bytes 0..512"}], "isError": true}}

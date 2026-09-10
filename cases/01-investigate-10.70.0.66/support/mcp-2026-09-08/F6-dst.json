@@ -1,1 +1,0 @@
-{"jsonrpc": "2.0", "id": "ec85b445-4158-489e-b826-84de77227a6a", "result": {"content": [{"type": "text", "text": "Error executing tool hdfs_query_records: Too many aggregation fields"}], "isError": true}}
