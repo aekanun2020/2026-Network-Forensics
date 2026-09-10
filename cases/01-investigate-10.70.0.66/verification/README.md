@@ -1,6 +1,6 @@
 # ผลตรวจคำตอบและการทำซ้ำจากไฟล์โดยไม่ใช้ MCP
 
-[โจทย์เดิม](../QUESTION-v1.md) · [คำตอบเดิม](../AGENT-ANSWER.md) · [เฉลย](../REFERENCE-ANSWER.md) · [หลักฐาน](../evidence/README.md)
+[หลักฐาน](../evidence/README.md)
 
 ผลที่บันทึกด้านล่างเกิดก่อน [NF-01-v2](../QUESTION.md) ไม่ใช่ผลรัน investigator หรือผลเปรียบเทียบ agent ด้วยโจทย์ฉบับใหม่
 
@@ -10,7 +10,6 @@
 
 ## แยกต้นฉบับ ผลเดิม และผลตรวจซ้ำ
 
-- [คำตอบต้นฉบับที่ผู้ใช้ส่งมา](../support/agent-answer-original.txt) คัดลอกตรงทุก byte; [ฉบับอ่านบน GitHub](../AGENT-ANSWER.md) เปลี่ยนเฉพาะลิงก์และเพิ่มคำอธิบายที่มานอกเนื้อหาเดิม
 - [ผลวัดก่อนจัดวาง](prior/measurements.json), [integrity ก่อนจัดวาง](prior/integrity.json), [tcpdump ก่อนจัดวาง](prior/tcpdump-target.txt) และ [ยอด tcpdump เดิม](prior/tcpdump-counts.json) คัดลอกโดยไม่แก้และไม่เปลี่ยนให้เป็นผลใหม่
 - [ผลวัดซ้ำรอบจัดวาง](current/measurements.json), [สรุปการวัด](current/measurement-summary.json), [receipt ของรอบนี้](current/receipt.json), [tcpdump รอบนี้](current/tcpdump-target.txt) และ [stderr ของ tcpdump](current/tcpdump-stderr.txt) เกิดจากอ่าน ZIPs ที่วางใน repo นี้จริง
 
