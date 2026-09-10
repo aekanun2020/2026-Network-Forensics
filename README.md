@@ -40,6 +40,7 @@
 ที่มาหนังสือ: คัดลอกทั้งไฟล์จาก [2026-Digital-Forensic ณ commit `6513b294d7da434e18123711e4410cbcc54017de`](https://github.com/aekanun2020/2026-Digital-Forensic/blob/6513b294d7da434e18123711e4410cbcc54017de/book/network-forensics-and-log-analysis-th.md) โดยคงเนื้อหา แผนภาพ และบรรณานุกรมตามต้นฉบับ ตัวอย่างในหนังสือเป็นสถานการณ์สมมติแยกจากหลักฐานและเฉลยของโจทย์ 01
 
 - [บันทึกกิจกรรม GCP](cloud-activities/README.md)
+- [student-1: คืนบริการที่ IP ใหม่ วันที่ 10 กันยายน](cloud-activities/2026-09-10-001-student-1-restore-new-ip.md)
 
 - [ผลตรวจกลับมาใช้งานหลัง Start VM วันที่ 9 กันยายน](cloud-activities/2026-09-09-001-student-1-restore.md)
 

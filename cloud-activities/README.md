@@ -25,3 +25,7 @@
 - [ผลตรวจ HTTPS/MCP จริงจากภายนอก VM](evidence/2026-09-08-public-mcp-verification.json)
 
 - [ผลตรวจ MCP หลัง Start VM วันที่ 9 กันยายน](evidence/2026-09-09-public-mcp-verification.json)
+
+- [student-1: คืนบริการที่ IP ใหม่ วันที่ 10 กันยายน](2026-09-10-001-student-1-restore-new-ip.md)
+
+- [ผลตรวจ MCP ของ student-1 วันที่ 10 กันยายน](evidence/2026-09-10-student-1-public-mcp-verification.json)
