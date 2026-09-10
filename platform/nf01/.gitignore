@@ -1,8 +1,0 @@
-__pycache__/
-*.py[cod]
-imports/*
-!imports/.gitkeep
-jobs/*
-!jobs/.gitkeep
-skill-drafts/*
-!skill-drafts/.gitkeep

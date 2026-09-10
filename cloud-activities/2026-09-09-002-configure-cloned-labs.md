@@ -44,6 +44,6 @@ All three passed trusted TLS, six exact sizes/SHA-256 values, a text record, a P
 - student-3: PASS, 17 main-session tool calls plus 4 concurrent hash calls; job `ba541d70-11ea-4084-8412-fb17506c200d`; completed 2026-09-09T06:29:02.005194+00:00.
 - student-4: PASS, 17 main-session tool calls plus 4 concurrent hash calls; job `b152a26a-1dea-4cf2-b5fd-2ef487d70ea9`; completed 2026-09-09T06:30:34.889450+00:00.
 
-See [group endpoint directory](../platform/nf01/GROUP-ENDPOINTS.md) for the full mapping and linked raw verification records. Student-1 was not modified or retested by this clone deployment; its earlier verification remains separate. Copied source job histories and raw data were retained.
+See the historical group endpoint directory (`platform/nf01/GROUP-ENDPOINTS.md`, removed from the current repository on 2026-09-10) for the full mapping and linked raw verification records. Student-1 was not modified or retested by this clone deployment; its earlier verification remains separate. Copied source job histories and raw data were retained.
 
 Per-VM README and Claude Desktop guides installed successfully at /opt/nf01 on all three clones, mode 0644. Final inventories showed HTTPS running plus all eight backend containers healthy on each. No guest operations targeted student-1. Finalized 2026-09-09T06:31:39.095474+00:00.

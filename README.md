@@ -35,15 +35,11 @@
 
 ข้อมูลโจทย์ 01 เป็นชุดสังเคราะห์ที่มี PCAP ต้นทางร่วมกัน ไม่ใช่เหตุโจมตีจริงที่ได้รับการยืนยัน คำตอบของ agent และผลวัดก่อนหน้านี้ถูกเก็บตามที่มา ไม่เปลี่ยนให้เป็นผลรัน Codex รอบใหม่ และไม่มี Python agent หรือ external LLM judge ในขั้นตอนตรวจคำตอบ
 
-## การติดตั้งและกิจกรรม Cloud
+## บันทึกกิจกรรม Cloud
 
 - [บันทึกกิจกรรม GCP](cloud-activities/README.md)
-- [ชุดติดตั้ง container สำหรับ NF-01 — HTTPS MCP ผ่านการทดสอบจากภายนอกแล้ว](platform/nf01/README.md)
-
-- [วิธีเชื่อม Claude Desktop กับ NF-01 MCP](platform/nf01/CLAUDE-DESKTOP.md)
 
 - [ผลตรวจกลับมาใช้งานหลัง Start VM วันที่ 9 กันยายน](cloud-activities/2026-09-09-001-student-1-restore.md)
 
 - [บันทึกการตั้งค่า VM กลุ่ม 2–4](cloud-activities/2026-09-09-002-configure-cloned-labs.md)
 
-- [ตาราง MCP URL และคู่มือ Claude Desktop สำหรับทั้ง 4 กลุ่ม](platform/nf01/GROUP-ENDPOINTS.md)
