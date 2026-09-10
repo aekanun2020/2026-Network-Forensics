@@ -1,0 +1,79 @@
+{
+  "started_utc": "2026-09-10T14:40:30.682181+00:00",
+  "operation": "read-only integrity check for CoC report",
+  "local_source": {
+    "path": "/Users/grizzlymacbookpro/Downloads/temp_extract_dir/psexec-hunt.pcapng",
+    "bytes": 10027488,
+    "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+    "stable_during_read": true
+  },
+  "endpoint": "https://35-186-155-169.sslip.io/mcp",
+  "calls": [
+    {
+      "tool": "hdfs_stat",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt"
+      },
+      "started_utc": "2026-09-10T14:40:30.903706+00:00",
+      "finished_utc": "2026-09-10T14:40:31.255851+00:00",
+      "isError": false,
+      "result": {
+        "accessTime": 0,
+        "blockSize": 0,
+        "childrenNum": 1,
+        "fileId": 16403,
+        "group": "supergroup",
+        "length": 0,
+        "modificationTime": 1789029793444,
+        "owner": "root",
+        "pathSuffix": "",
+        "permission": "555",
+        "replication": 0,
+        "storagePolicy": 0,
+        "type": "DIRECTORY"
+      }
+    },
+    {
+      "tool": "hdfs_stat",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng"
+      },
+      "started_utc": "2026-09-10T14:40:31.256162+00:00",
+      "finished_utc": "2026-09-10T14:40:31.355785+00:00",
+      "isError": false,
+      "result": {
+        "accessTime": 1789049131669,
+        "blockSize": 134217728,
+        "childrenNum": 0,
+        "fileId": 16404,
+        "group": "supergroup",
+        "length": 10027488,
+        "modificationTime": 1789029467586,
+        "owner": "root",
+        "pathSuffix": "",
+        "permission": "444",
+        "replication": 2,
+        "storagePolicy": 0,
+        "type": "FILE"
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng"
+      },
+      "started_utc": "2026-09-10T14:40:31.355953+00:00",
+      "finished_utc": "2026-09-10T14:40:33.644347+00:00",
+      "isError": false,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      }
+    }
+  ],
+  "completed_utc": "2026-09-10T14:40:33.715348+00:00",
+  "integrity_match": true
+}

@@ -50,4 +50,6 @@
 
 - [MCP binary upload: source delta, client และผลทดสอบ](cloud-activities/changes/2026-09-10-binary-upload/README.md)
 
+- [CoC Report: psexec-hunt — ลำดับการจัดการหลักฐานและข้อจำกัด](reports/psexec-hunt/chain-of-custody-2026-09-10.md)
+
 </details>

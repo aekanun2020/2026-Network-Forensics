@@ -1,0 +1,985 @@
+{
+  "created_at": "2026-09-10T21:42:56+07:00",
+  "kind": "redacted derivative index; not original tool output",
+  "redaction": "payload_hex and payload_text omitted; original result files remain only at listed local paths; packet_utc is capture time, not analysis time",
+  "files": [
+    {
+      "local_raw_result_path": "/tmp/psexec-seven-initial.jsonl",
+      "raw_result_bytes": 63548,
+      "raw_result_sha256": "78c2ab8cf8b771061545258eec8cb138c2b91454fdccd95dc34b9c038158baea",
+      "analysis_execution_time": "not recorded in these tool-result files; occurred earlier in this conversation",
+      "calls": [
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "ntlmssp.messagetype == 3",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 27,
+          "samples_truncated": true,
+          "packets": [
+            {
+              "packet_number": 132,
+              "packet_utc": "2023-10-11T07:42:08.879116+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "6246471a10bca1dce7a079ea4f461b5b2d3560d9c9bc7678e3e918052f89904f",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 340,
+              "packet_utc": "2023-10-11T07:42:08.975630+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "DCERPC",
+              "returned_payload_sha256": "4f1428e7991f22b02ab0910bf73843213f84d33f794ae0699b3c2c2ff8d3e20c",
+              "returned_payload_bytes": 438,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 535,
+              "packet_utc": "2023-10-11T07:42:09.990590+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "b0fb94fcc81744b380a6c2640f76970e673c1a29806f254375f0bd8932b59344",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 543,
+              "packet_utc": "2023-10-11T07:42:10.146927+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "4a29bf90fcb5b9f02db3b50c00fa7a177a03dda01504dbd9045e27c1db1c9b71",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 551,
+              "packet_utc": "2023-10-11T07:42:10.224977+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "4564445e4d314c0c583cedd432d48c6085e75b0b717fc14c1c7be2a2d55d2b61",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 556,
+              "packet_utc": "2023-10-11T07:42:10.318459+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "9cde02237c1090e289b9bd4070360857ea4b09c6e04a9e37181eab8092f38d66",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38450,
+              "packet_utc": "2023-10-11T07:45:56.312326+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "DCERPC",
+              "returned_payload_sha256": "4118d8011cb85f259c08a33bc20006a62e516b6ee5ef7a3cbb5a7b64550f02e1",
+              "returned_payload_bytes": 438,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38515,
+              "packet_utc": "2023-10-11T07:46:19.911755+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "b6e88c80a97eb02ae672ba69bedda6ef1a95335bc4931e2783c63add9bdaa996",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 38535,
+              "packet_utc": "2023-10-11T07:46:21.975433+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "e6f6f23be69bc4b37c12b8a86896ca4e2f63ebc0822e858bb5b6a8ffad2ab5c5",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 38743,
+              "packet_utc": "2023-10-11T07:46:22.081016+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "DCERPC",
+              "returned_payload_sha256": "1c967a8d659c3fc31e87ba120c905ad344568e731a5049ab92f297f08d657cd5",
+              "returned_payload_bytes": 470,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39066,
+              "packet_utc": "2023-10-11T07:46:22.986383+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "ff00225824de6c0e4ed532eaf3ed3a90b957cbdee35197a560938f27f012f46c",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39071,
+              "packet_utc": "2023-10-11T07:46:23.299327+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "2388dc9c5d03f1b6f9730eae067aeca8167d3d2d4d2841e938ae2741d9280943",
+              "returned_payload_bytes": 207,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.cmd == 3",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 18,
+          "samples_truncated": true,
+          "packets": [
+            {
+              "packet_number": 134,
+              "packet_utc": "2023-10-11T07:42:08.881276+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "f3592a425346d887e268cfd4e2b6f28b3776325dc9ec8be1b9331f6a2df0e84d",
+              "returned_payload_bytes": 110,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 135,
+              "packet_utc": "2023-10-11T07:42:08.881481+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "bbb1a0b342819f157d26aa295b165aa498ab35356beb3949abc187e53eed5492",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 138,
+              "packet_utc": "2023-10-11T07:42:08.882995+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "a392360caa0f1064723737522002613db82e2e53537068f65db36eca159af1dd",
+              "returned_payload_bytes": 114,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 139,
+              "packet_utc": "2023-10-11T07:42:08.883429+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "3e402fb5777a682ea0e414ae57db4a2b94186291f6aa46bff6009c1c201e923a",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38470,
+              "packet_utc": "2023-10-11T07:45:56.318784+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d1ac22241694db3b22c5e2e50122ee2b51674f395d3f39bd00679a7f536aa6ee",
+              "returned_payload_bytes": 114,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38471,
+              "packet_utc": "2023-10-11T07:45:56.319726+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d1f6e64e46e4dca44ecd18351b071792bab731f659fc8cbcc38728a7b88746e6",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38537,
+              "packet_utc": "2023-10-11T07:46:21.977546+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "9fdeefe149c72cbdae7fb2fa724cff256cbe2611f65c495fbf00d1d9f5f78b2a",
+              "returned_payload_bytes": 114,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38538,
+              "packet_utc": "2023-10-11T07:46:21.977809+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "e780ddcaa7dc771cd7f8472e7a000bbabd4e977e84106297a87bf4da2f66104a",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38771,
+              "packet_utc": "2023-10-11T07:46:22.299037+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "71f6efa0fb8f1dd8dd2d52355144e4cb4ae023860b731ce2b0927777751f46f6",
+              "returned_payload_bytes": 110,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38772,
+              "packet_utc": "2023-10-11T07:46:22.299334+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "03c5a3e9e2ffceef1a4f1f0709d2833393ba21f914e3880f2c98ecd1f7c1acc1",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39114,
+              "packet_utc": "2023-10-11T07:46:33.563113+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "7a3d1160612a56449c33a5407e57da471a9ab254a68885d45f276b24fa76a672",
+              "returned_payload_bytes": 114,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39115,
+              "packet_utc": "2023-10-11T07:46:33.563431+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "00b03c7f464931f1ded5d7acb4649f0d995300e9e024b43528481fa5b147d843",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "svcctl",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 142,
+          "samples_truncated": true,
+          "packets": [
+            {
+              "packet_number": 341,
+              "packet_utc": "2023-10-11T07:42:08.975816+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "8f30ca898cd13e7feeaee668df1f764e3d9798383e61d2815ed9f0a8890401e0",
+              "returned_payload_bytes": 112,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 343,
+              "packet_utc": "2023-10-11T07:42:08.976896+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "46d0812e992d78c948ac4cca20b3821f90295805e1bb24e8a2c525f9ab4f314f",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 344,
+              "packet_utc": "2023-10-11T07:42:08.977218+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "5592640e86d3546df82a728d918f570fde2576ce08b30886df16afa685c6e489",
+              "returned_payload_bytes": 256,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 345,
+              "packet_utc": "2023-10-11T07:42:08.978459+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "1f9ce782050312c51d75458470a063c9ca180abd77d8a73276541e5cd8013c23",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 346,
+              "packet_utc": "2023-10-11T07:42:08.978693+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "465f35b0f7b1863ecd199ea5f01b79bf688ab619ef3c7d3758fa42c64f344dcc",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 347,
+              "packet_utc": "2023-10-11T07:42:08.978698+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "6a3702f02207cc2ed32e1feae1c4ced266867e4abf6d188918975e17680cfcc6",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 348,
+              "packet_utc": "2023-10-11T07:42:08.979021+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "b638fc419e30d9b30622e10217befac5d2f72a26852facfad3f873d413c9ea01",
+              "returned_payload_bytes": 112,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 349,
+              "packet_utc": "2023-10-11T07:42:08.979241+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "aefee03dca783f0134bad330969dc92777ea6f91b8ca0e39646ff3fa3602faee",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 350,
+              "packet_utc": "2023-10-11T07:42:08.979398+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "87af681e9fe619e553d4061250489d4d4a655d684c1ca1587ca2d5efb7972073",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 353,
+              "packet_utc": "2023-10-11T07:42:09.034106+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "e81ecb3feb00e9870f7e069ce6c1b3de83ef048e530947f17e2f4afe1427f63b",
+              "returned_payload_bytes": 64,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 354,
+              "packet_utc": "2023-10-11T07:42:09.034546+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "490bc9f2a7b8689fc755dba1f149d968db901e5ca02f05e950e2825df7a8b474",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 355,
+              "packet_utc": "2023-10-11T07:42:09.034756+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SVCCTL",
+              "returned_payload_sha256": "a9923f6cbbc5c427b37cf292c7f34169e8a937be5a939ed4c3c3b7589b767c43",
+              "returned_payload_bytes": 80,
+              "payload_truncated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "local_raw_result_path": "/tmp/psexec-seven-details.jsonl",
+      "raw_result_bytes": 20999,
+      "raw_result_sha256": "df1a2760ab540d38e8354d56497b9e19d4178cd735ff14f77302dc3caba11801",
+      "analysis_execution_time": "not recorded in these tool-result files; occurred earlier in this conversation",
+      "calls": [
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "tcp.flags.syn == 1 && tcp.flags.ack == 0 && tcp.dstport == 445",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 5,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 123,
+              "packet_utc": "2023-10-11T07:42:08.846828+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "TCP",
+              "returned_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "returned_payload_bytes": 0,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38506,
+              "packet_utc": "2023-10-11T07:46:19.882473+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "TCP",
+              "returned_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "returned_payload_bytes": 0,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38528,
+              "packet_utc": "2023-10-11T07:46:21.972594+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "TCP",
+              "returned_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "returned_payload_bytes": 0,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39105,
+              "packet_utc": "2023-10-11T07:46:33.559010+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "TCP",
+              "returned_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "returned_payload_bytes": 0,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 39693,
+              "packet_utc": "2023-10-11T07:46:40.031324+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "TCP",
+              "returned_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "returned_payload_bytes": 0,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.filename && frame.number < 331",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 2,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 140,
+              "packet_utc": "2023-10-11T07:42:08.884053+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d4755455780602d7cb58d2aeaf1d52938bc61c42f517f525f37052ec4976b3a5",
+              "returned_payload_bytes": 180,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 144,
+              "packet_utc": "2023-10-11T07:42:08.885179+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "be2f1bf39e4a176f15a952aa7f910622d9aa1f333c10da48ad24c46aa84bfaf8",
+              "returned_payload_bytes": 328,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "ntlmssp.auth.username == \"ssales\"",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 1,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 132,
+              "packet_utc": "2023-10-11T07:42:08.879116+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "6246471a10bca1dce7a079ea4f461b5b2d3560d9c9bc7678e3e918052f89904f",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "ntlmssp.messagetype == 2 && (frame.number < 140 || (frame.number >= 38500 && frame.number < 38540))",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 3,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 131,
+              "packet_utc": "2023-10-11T07:42:08.878608+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "7981d2eb343a3d5e537a5349ceb75563e54a8bf42c87b5eee2bb894e8b5c0c6b",
+              "returned_payload_bytes": 275,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38514,
+              "packet_utc": "2023-10-11T07:46:19.911314+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d8cc451931f15577b05686ed56b142a92bbb7dacc54177a557bd4c8a3db22c72",
+              "returned_payload_bytes": 315,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38534,
+              "packet_utc": "2023-10-11T07:46:21.975014+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "1a114c5d985c480dc412dd0c0aedda6a11a83019a295d781c427881f484001c1",
+              "returned_payload_bytes": 315,
+              "payload_truncated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "local_raw_result_path": "/tmp/psexec-seven-confirm.jsonl",
+      "raw_result_bytes": 56761,
+      "raw_result_sha256": "2803184fb23105e3297d20b52b6d5c87368ab87aca1c9af9b0ba4429b5cbe8f7",
+      "analysis_execution_time": "not recorded in these tool-result files; occurred earlier in this conversation",
+      "calls": [
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.filename contains \"PSEXESVC\"",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 27,
+          "samples_truncated": true,
+          "packets": [
+            {
+              "packet_number": 144,
+              "packet_utc": "2023-10-11T07:42:08.885179+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "be2f1bf39e4a176f15a952aa7f910622d9aa1f333c10da48ad24c46aa84bfaf8",
+              "returned_payload_bytes": 328,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 371,
+              "packet_utc": "2023-10-11T07:42:09.208291+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "31a2b36b90e0c6ef2e60e4d07fae40a6c06ea0eb4fe61bc7737fe0b19b3c333b",
+              "returned_payload_bytes": 140,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 499,
+              "packet_utc": "2023-10-11T07:42:09.276300+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "ad3baea8afccb9a659bce23f20c89da61868f952826483836ce8defa5b1eb8a4",
+              "returned_payload_bytes": 174,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 505,
+              "packet_utc": "2023-10-11T07:42:09.277765+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d42e5e33bf0f0f5bcdd0fe126d922eedae2189b2965e96070340558de129aeb9",
+              "returned_payload_bytes": 176,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 511,
+              "packet_utc": "2023-10-11T07:42:09.278844+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "4972a0b9451e4d6711f9f9b2589be48fc01e7fae4928d7b4054bb7eee2c55767",
+              "returned_payload_bytes": 176,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 537,
+              "packet_utc": "2023-10-11T07:42:10.030624+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "f70d729776f7a237c5825ea31235fcfab3bd227c886d6b3b73a44b90cdc20573",
+              "returned_payload_bytes": 300,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 545,
+              "packet_utc": "2023-10-11T07:42:10.162988+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "a05b0e33857a01c6d1249a42df271331ee70e3adb3f7aa9bf33112b230ff2647",
+              "returned_payload_bytes": 300,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38472,
+              "packet_utc": "2023-10-11T07:45:56.320301+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "754221bb42071f447429122147cf67d28953366e5f766feb3bf43813e0ee406c",
+              "returned_payload_bytes": 328,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38545,
+              "packet_utc": "2023-10-11T07:46:21.980242+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "bc216e879d68d1ff649b735adecd94dfc69a7380e7e03bd1e537d4296d99e2e2",
+              "returned_payload_bytes": 328,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38773,
+              "packet_utc": "2023-10-11T07:46:22.299706+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "55f13b27aca6bb35e9e15af913810fdfbeb646e5dc73f756bc2373ed7730f9a4",
+              "returned_payload_bytes": 140,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38900,
+              "packet_utc": "2023-10-11T07:46:22.368637+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "bcf998e9e29dd1c3f5f35d526fab82a903c957ceb085c14e36c754f7eb81cb62",
+              "returned_payload_bytes": 174,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38906,
+              "packet_utc": "2023-10-11T07:46:22.369817+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.131",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "bd412eb9937348fd6d0a5f59546192e8499f7a587b32e327b27c3237ffac5401",
+              "returned_payload_bytes": 176,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.nt_status == 0 && (frame.number == 133 || frame.number == 135 || frame.number == 139 || frame.number == 145)",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 4,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 133,
+              "packet_utc": "2023-10-11T07:42:08.880597+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "f7d6ff9b7ea863705f6e378e0b2acaa9c7c43406ea2244e92a5a07c11d46640c",
+              "returned_payload_bytes": 105,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 135,
+              "packet_utc": "2023-10-11T07:42:08.881481+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "bbb1a0b342819f157d26aa295b165aa498ab35356beb3949abc187e53eed5492",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 139,
+              "packet_utc": "2023-10-11T07:42:08.883429+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "3e402fb5777a682ea0e414ae57db4a2b94186291f6aa46bff6009c1c201e923a",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 145,
+              "packet_utc": "2023-10-11T07:42:08.885758+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "cb68bb09e54de0ca0a26d787ffdc7268d8fb4c3a9ff41dd24c4a9b200c2467ff",
+              "returned_payload_bytes": 356,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.cmd == 9 && frame.number < 331",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 9,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 192,
+              "packet_utc": "2023-10-11T07:42:08.886768+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "708f16d5b760b3e7217c07a269f91d2c240d8157cac6444f3112279db7d78f8c",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 238,
+              "packet_utc": "2023-10-11T07:42:08.887177+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "fc8fb8902045c01941c2be29ed41c79baa9579540efe6443ada20fc1d4f30064",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 240,
+              "packet_utc": "2023-10-11T07:42:08.887641+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "a323d167537490ca5a1456aee79b31ff2a88235b7bb2d6e0f01f2db707e5725c",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 248,
+              "packet_utc": "2023-10-11T07:42:08.887778+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "9587ffdf5eb653a43982b6b8f0d3de33daea6f4ac7ac21b7a12c85ff65c3afb3",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 287,
+              "packet_utc": "2023-10-11T07:42:08.888476+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "ad66d96856ce36a1e6f400281a4f39f9ce0c2752cf4adc41e855d7925e16eb0e",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 318,
+              "packet_utc": "2023-10-11T07:42:08.888564+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "a0a927338f2c2d31cc52081aac94f380e3febd6bc3b073101e1a25ff0699a780",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 319,
+              "packet_utc": "2023-10-11T07:42:08.888798+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "b7aa229dbc7c28ab39067e227a396565a3be721d3e26012f7ce904ae0883fc87",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 321,
+              "packet_utc": "2023-10-11T07:42:08.889134+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "0b00e728061b06d8ef004e950b8a39f414e560ed1c98bca7555852de5c2a088e",
+              "returned_payload_bytes": 512,
+              "payload_truncated": true
+            },
+            {
+              "packet_number": 322,
+              "packet_utc": "2023-10-11T07:42:08.889231+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "d353fadd02eb47c40752557e520d12bd705912718d5d62fc1084261b7d736b61",
+              "returned_payload_bytes": 84,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "frame.number == 38516 || frame.number == 38536",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 2,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 38516,
+              "packet_utc": "2023-10-11T07:46:19.914245+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "b7d10f11599815e55f13f807723bc9b6827017626ac1a23a4b945c7357a1cec7",
+              "returned_payload_bytes": 76,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 38536,
+              "packet_utc": "2023-10-11T07:46:21.977091+00:00",
+              "source_ip": "10.0.0.131",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "93dff319fcff9e30fe363bb5d1d2e49939d6ec08877f87f432e5da9f7c330f79",
+              "returned_payload_bytes": 105,
+              "payload_truncated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "local_raw_result_path": "/tmp/psexec-seven-final-check.jsonl",
+      "raw_result_bytes": 10901,
+      "raw_result_sha256": "3f0cd07be82440f321c2e8f264ed33c90999153cc980e513f9564d86e420fb15",
+      "analysis_execution_time": "not recorded in these tool-result files; occurred earlier in this conversation",
+      "calls": [
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.nt_status == 0 && (frame.number == 372 || frame.number == 500 || frame.number == 506 || frame.number == 512)",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 4,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 372,
+              "packet_utc": "2023-10-11T07:42:09.208891+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "736282a5794e1c7d4d059ff9d3962e468e6f969835da77ce31e4b1352fa6b4ba",
+              "returned_payload_bytes": 156,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 500,
+              "packet_utc": "2023-10-11T07:42:09.276724+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "94671753a36edb7e22c2d48806639b3108c6fedcfd17c4f83fb46311bfe2fd03",
+              "returned_payload_bytes": 156,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 506,
+              "packet_utc": "2023-10-11T07:42:09.277975+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "4d0886b1082e5718b6063857be5a7fa74b1b0eae4e66aff72da45b9494ff235d",
+              "returned_payload_bytes": 156,
+              "payload_truncated": false
+            },
+            {
+              "packet_number": 512,
+              "packet_utc": "2023-10-11T07:42:09.279091+00:00",
+              "source_ip": "10.0.0.133",
+              "destination_ip": "10.0.0.130",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "6f43d36b38e987671e62fc4546c379ea5fe6ec8130e086f29e349281f9d18807",
+              "returned_payload_bytes": 156,
+              "payload_truncated": false
+            }
+          ]
+        },
+        {
+          "tool": "hdfs_pcap_packets",
+          "filter": "smb2.filename == \"PSEXESVC.exe\" && frame.number < 331",
+          "isError": false,
+          "file_bytes": 10027488,
+          "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+          "complete_scan": true,
+          "matching_packets": 1,
+          "samples_truncated": false,
+          "packets": [
+            {
+              "packet_number": 144,
+              "packet_utc": "2023-10-11T07:42:08.885179+00:00",
+              "source_ip": "10.0.0.130",
+              "destination_ip": "10.0.0.133",
+              "protocol": "SMB2",
+              "returned_payload_sha256": "be2f1bf39e4a176f15a952aa7f910622d9aa1f333c10da48ad24c46aa84bfaf8",
+              "returned_payload_bytes": 328,
+              "payload_truncated": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
