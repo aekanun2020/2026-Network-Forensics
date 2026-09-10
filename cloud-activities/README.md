@@ -29,3 +29,7 @@
 - [student-1: คืนบริการที่ IP ใหม่ วันที่ 10 กันยายน](2026-09-10-001-student-1-restore-new-ip.md)
 
 - [ผลตรวจ MCP ของ student-1 วันที่ 10 กันยายน](evidence/2026-09-10-student-1-public-mcp-verification.json)
+
+- [student-1: นำเข้า psexec-hunt และเพิ่ม binary MCP upload](2026-09-10-002-psexec-import-and-binary-mcp.md)
+
+- [MCP binary upload: source, client และผลทดสอบ](changes/2026-09-10-binary-upload/README.md)

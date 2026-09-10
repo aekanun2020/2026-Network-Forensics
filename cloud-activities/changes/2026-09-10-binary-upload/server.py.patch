@@ -1,0 +1,129 @@
+--- a/mcp-server/server.py
++++ b/mcp-server/server.py
+@@ -1,6 +1,8 @@
+ from __future__ import annotations
+ 
+ import ast
++import base64
++import binascii
+ import asyncio
+ import hashlib
+ import json
+@@ -8,6 +10,7 @@
+ import re
+ import signal
+ import stat
++import tempfile
+ import uuid
+ from dataclasses import dataclass
+ from datetime import datetime, timezone
+@@ -31,6 +34,8 @@
+ 
+ MAX_CODE_BYTES = 512 * 1024
+ MAX_TEXT_BYTES = 4 * 1024 * 1024
++MAX_UPLOAD_BYTES = 32 * 1024 * 1024
++MAX_UPLOAD_BASE64_CHARS = 4 * ((MAX_UPLOAD_BYTES + 2) // 3)
+ MAX_LOG_LINES = 2_000
+ FILENAME_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}\.py$")
+ IMPORT_NAME_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]{0,255}$")
+@@ -67,6 +72,8 @@
+     host="0.0.0.0",
+     port=8000,
+     json_response=True,
++    # Bounded JSON envelope plus Base64 expansion of one maximum-size upload.
++    max_request_body_size=MAX_UPLOAD_BASE64_CHARS + 64 * 1024,
+ )
+ 
+ 
+@@ -79,6 +86,8 @@
+ 
+ running_jobs: dict[str, RunningJob] = {}
+ submit_lock = asyncio.Lock()
++# One server process: reject overlapping imports/uploads instead of queuing bodies.
++import_lock = asyncio.Lock()
+ MAX_ACTIVE_JOBS = 2
+ MAX_ADMITTED_JOBS = 8
+ job_slots = asyncio.Semaphore(MAX_ACTIVE_JOBS)
+@@ -799,7 +808,8 @@
+     path, such as ``/mcp/lab/input.log``. Pass that returned value unchanged to
+     PySpark or ``spark_submit_job``. Do not pass it back into an HDFS MCP tool.
+ 
+-    Callers must serialize writes to one destination. An existing destination is
++    Imports and binary uploads are serialized within this server process. Other
++    writers and server replicas must serialize writes to one destination. An existing destination is
+     replay-safe when ``overwrite`` is false and its exact bytes already match the
+     stable source. Otherwise an existing destination is moved to a temporary
+     backup for rollback because FsShell rename does not provide a cross-replica
+@@ -810,6 +820,72 @@
+     source = (IMPORTS_DIR / source_name).resolve()
+     if source.parent != IMPORTS_DIR:
+         raise ToolError(f"import file does not exist: {source_name}")
++    if import_lock.locked():
++        raise ToolError("another import or upload is active; retry after it completes")
++    async with import_lock:
++        return await import_stable_file(source, source_name, destination, overwrite)
++
++
++@mcp.tool()
++async def hdfs_upload_file(
++    destination: str, content_base64: str, expected_bytes: int, expected_sha256: str
++) -> dict[str, Any]:
++    """Upload client binary bytes through MCP, verify SHA-256, then publish in HDFS.
++
++    Send canonical standard Base64 (no data-URL prefix or whitespace), not a local
++    filesystem path. Maximum decoded file size: 32 MiB (33554432 bytes) per call.
++    Compute expected_bytes and expected_sha256 from the original local file.
++    destination is a virtual path below /mcp; omit the /mcp prefix. The response
++    returns both virtual_path and the physical destination for Spark.
++    Existing identical files are replay-safe; different content is never replaced.
++    At most one import/upload runs in this server process; retry a busy response.
++    Staging is temporary in the existing state volume, separate from read-only
++    imports. A response is successful only after exact HDFS bytes/hash verification.
++    Client request limits may be lower than this server's 32 MiB limit.
++    """
++    target = safe_hdfs_path(destination)
++    if PurePosixPath(target) == HDFS_ROOT:
++        raise ToolError("destination must be a file below the restricted HDFS root")
++    if not 0 <= expected_bytes <= MAX_UPLOAD_BYTES:
++        raise ToolError(f"expected_bytes must be 0..{MAX_UPLOAD_BYTES}")
++    if not SHA256_RE.fullmatch(expected_sha256):
++        raise ToolError("expected_sha256 must contain exactly 64 hexadecimal characters")
++    if len(content_base64) > MAX_UPLOAD_BASE64_CHARS:
++        raise ToolError("Base64 content exceeds the 32 MiB upload limit")
++    if len(content_base64) != 4 * ((expected_bytes + 2) // 3):
++        raise ToolError("Base64 length does not match expected_bytes")
++    if import_lock.locked():
++        raise ToolError("another import or upload is active; retry after it completes")
++    async with import_lock:
++        try:
++            content = base64.b64decode(content_base64, validate=True)
++        except (ValueError, binascii.Error) as exc:
++            raise ToolError("content_base64 must be valid standard Base64") from exc
++        if base64.b64encode(content).decode("ascii") != content_base64:
++            raise ToolError("content_base64 must use canonical Base64 encoding")
++        if len(content) != expected_bytes:
++            raise ToolError("decoded byte count differs from expected_bytes")
++        digest = hashlib.sha256(content).hexdigest()
++        if digest != expected_sha256.lower():
++            raise ToolError("decoded SHA-256 differs from expected_sha256")
++        # All client content checks precede filesystem/HDFS mutation.
++        # TemporaryDirectory uses a unique mode-0700 directory, never /imports.
++        with tempfile.TemporaryDirectory(prefix="binary-upload-", dir=STATE_DIR) as directory:
++            source = Path(directory) / "upload.bin"
++            source.write_bytes(content)
++            del content
++            result = await import_stable_file(source, "upload.bin", destination, False)
++        result.pop("source_name", None)
++        result["virtual_path"] = "/" + str(PurePosixPath(target).relative_to(HDFS_ROOT))
++        result["transport"] = "mcp-base64"
++        result["staging_removed"] = True
++        return result
++
++
++async def import_stable_file(
++    source: Path, source_name: str, destination: str, overwrite: bool
++) -> dict[str, Any]:
++    """Common verified import implementation; caller must hold import_lock."""
+     try:
+         source_before = await asyncio.to_thread(file_fingerprint, source)
+     except (OSError, ValueError) as exc:

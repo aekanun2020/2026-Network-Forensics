@@ -1,0 +1,48 @@
+{
+  "started": "2026-09-10T08:39:40.220820+00:00",
+  "endpoint": "https://35-186-155-169.sslip.io/mcp",
+  "source_bytes": 10027488,
+  "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+  "tests": [
+    {
+      "label": "unique test destination absent",
+      "tool": "hdfs_stat",
+      "started": "2026-09-10T08:39:40.554423+00:00",
+      "completed": "2026-09-10T08:39:40.650227+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_stat: HDFS GETFILESTATUS failed (404): File does not exist: /mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910"
+      ]
+    }
+  ],
+  "upload_tool_schema": {
+    "properties": {
+      "destination": {
+        "title": "Destination",
+        "type": "string"
+      },
+      "content_base64": {
+        "title": "Content Base64",
+        "type": "string"
+      },
+      "expected_bytes": {
+        "title": "Expected Bytes",
+        "type": "integer"
+      },
+      "expected_sha256": {
+        "title": "Expected Sha256",
+        "type": "string"
+      }
+    },
+    "required": [
+      "destination",
+      "content_base64",
+      "expected_bytes",
+      "expected_sha256"
+    ],
+    "title": "hdfs_upload_fileArguments",
+    "type": "object"
+  }
+}

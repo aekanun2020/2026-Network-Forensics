@@ -1,0 +1,447 @@
+{
+  "started": "2026-09-10T08:42:36.950177+00:00",
+  "endpoint": "https://35-186-155-169.sslip.io/mcp",
+  "source_bytes": 10027488,
+  "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+  "tests": [
+    {
+      "label": "unique test destination absent",
+      "tool": "hdfs_stat",
+      "started": "2026-09-10T08:42:37.325964+00:00",
+      "completed": "2026-09-10T08:42:37.422745+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_stat: HDFS GETFILESTATUS failed (404): File does not exist: /mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910"
+      ]
+    },
+    {
+      "label": "full capture upload via new MCP tool",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:42:37.424146+00:00",
+      "completed": "2026-09-10T08:42:51.858568+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "destination": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "destination_bytes": 10027488,
+        "destination_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "destination_verified": true,
+        "source_stable": true,
+        "overwrite": false,
+        "reused": false,
+        "virtual_path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "transport": "mcp-base64",
+        "staging_removed": true
+      }
+    },
+    {
+      "label": "independent uploaded HDFS SHA-256",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:42:51.859442+00:00",
+      "completed": "2026-09-10T08:42:54.342279+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      }
+    },
+    {
+      "label": "safe replay of full upload",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:42:54.343109+00:00",
+      "completed": "2026-09-10T08:43:01.531050+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "destination": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "destination_bytes": 10027488,
+        "destination_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "destination_verified": true,
+        "source_stable": true,
+        "overwrite": false,
+        "reused": true,
+        "virtual_path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "transport": "mcp-base64",
+        "staging_removed": true
+      }
+    },
+    {
+      "label": "different existing content rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:01.531742+00:00",
+      "completed": "2026-09-10T08:43:08.153236+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: destination exists with content different from the stable import source"
+      ]
+    },
+    {
+      "label": "wrong SHA-256 rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:08.154236+00:00",
+      "completed": "2026-09-10T08:43:08.194924+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: decoded SHA-256 differs from expected_sha256"
+      ]
+    },
+    {
+      "label": "invalid Base64 rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:08.195211+00:00",
+      "completed": "2026-09-10T08:43:08.234273+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: content_base64 must be valid standard Base64"
+      ]
+    },
+    {
+      "label": "wrong decoded byte count rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:08.234563+00:00",
+      "completed": "2026-09-10T08:43:08.274040+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: decoded byte count differs from expected_bytes"
+      ]
+    },
+    {
+      "label": "oversize declared upload rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:08.274362+00:00",
+      "completed": "2026-09-10T08:43:08.313002+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: expected_bytes must be 0..33554432"
+      ]
+    },
+    {
+      "label": "path traversal rejected",
+      "tool": "hdfs_upload_file",
+      "started": "2026-09-10T08:43:08.313331+00:00",
+      "completed": "2026-09-10T08:43:08.361843+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_upload_file: HDFS path cannot contain '..'"
+      ]
+    },
+    {
+      "label": "invalid uploads created no HDFS file",
+      "tool": "hdfs_stat",
+      "started": "2026-09-10T08:43:08.362833+00:00",
+      "completed": "2026-09-10T08:43:08.440273+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_stat: HDFS GETFILESTATUS failed (404): File does not exist: /mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910.invalid"
+      ]
+    },
+    {
+      "label": "conflict left original full bytes intact",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:08.443658+00:00",
+      "completed": "2026-09-10T08:43:10.869295+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      }
+    },
+    {
+      "label": "canonical import retained",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:10.870229+00:00",
+      "completed": "2026-09-10T08:43:13.373489+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      }
+    },
+    {
+      "label": "remove verified duplicate only",
+      "tool": "hdfs_delete",
+      "started": "2026-09-10T08:43:13.374464+00:00",
+      "completed": "2026-09-10T08:43:13.467911+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910",
+        "deleted": true
+      }
+    },
+    {
+      "label": "duplicate removed",
+      "tool": "hdfs_stat",
+      "started": "2026-09-10T08:43:13.468261+00:00",
+      "completed": "2026-09-10T08:43:13.541143+00:00",
+      "expected_error": true,
+      "isError": true,
+      "pass": true,
+      "result": [
+        "Error executing tool hdfs_stat: HDFS GETFILESTATUS failed (404): File does not exist: /mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng.mcp-upload-verification-20260910"
+      ]
+    },
+    {
+      "label": "canonical file metadata",
+      "tool": "hdfs_stat",
+      "started": "2026-09-10T08:43:13.541563+00:00",
+      "completed": "2026-09-10T08:43:13.621416+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "accessTime": 1789029466779,
+        "blockSize": 134217728,
+        "childrenNum": 0,
+        "fileId": 16404,
+        "group": "supergroup",
+        "length": 10027488,
+        "modificationTime": 1789029467586,
+        "owner": "spark",
+        "pathSuffix": "",
+        "permission": "644",
+        "replication": 2,
+        "storagePolicy": 0,
+        "type": "FILE"
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-course-100k.pcap",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:13.622573+00:00",
+      "completed": "2026-09-10T08:43:16.153186+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "bytes": 60853574,
+        "sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+        "complete": true
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-pcap-zeek-dns-120.jsonl",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:16.153709+00:00",
+      "completed": "2026-09-10T08:43:18.510677+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "bytes": 52043,
+        "sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+        "complete": true
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-pcap-zeek-conn-100k.jsonl",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:18.511657+00:00",
+      "completed": "2026-09-10T08:43:20.995654+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "bytes": 37114964,
+        "sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+        "complete": true
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-pcap-netflow-v5-100k.jsonl",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:20.996618+00:00",
+      "completed": "2026-09-10T08:43:23.816029+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "bytes": 54407704,
+        "sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+        "complete": true
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-pcap-suricata-alerts-340.jsonl",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:23.816984+00:00",
+      "completed": "2026-09-10T08:43:26.335719+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "bytes": 154267,
+        "sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+        "complete": true
+      }
+    },
+    {
+      "label": "NF01 integrity coherent-pcap-fortigate-100k.log",
+      "tool": "hdfs_sha256",
+      "started": "2026-09-10T08:43:26.336824+00:00",
+      "completed": "2026-09-10T08:43:29.073801+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "bytes": 47539569,
+        "sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+        "complete": true
+      }
+    },
+    {
+      "label": "HDFS health",
+      "tool": "hdfs_cluster_status",
+      "started": "2026-09-10T08:43:29.074386+00:00",
+      "completed": "2026-09-10T08:43:29.161538+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "CapacityTotal": 205830979584,
+        "CapacityUsed": 423731200,
+        "CapacityRemaining": 189259350016,
+        "FilesTotal": 20,
+        "BlocksTotal": 7,
+        "MissingBlocks": 0,
+        "NumLiveDataNodes": 2,
+        "NumDeadDataNodes": 0,
+        "UnderReplicatedBlocks": 0
+      }
+    },
+    {
+      "label": "Spark health",
+      "tool": "spark_cluster_status",
+      "started": "2026-09-10T08:43:29.162578+00:00",
+      "completed": "2026-09-10T08:43:29.243359+00:00",
+      "expected_error": false,
+      "isError": false,
+      "pass": true,
+      "result": {
+        "url": "spark://spark-master:7077",
+        "status": "ALIVE",
+        "cores": 4,
+        "cores_used": 0,
+        "memory": 8192,
+        "memory_used": 0,
+        "workers": [
+          {
+            "id": "worker-20260910080818-172.18.0.7-45755",
+            "host": "172.18.0.7",
+            "port": 45755,
+            "webuiaddress": "http://172.18.0.7:8081",
+            "cores": 2,
+            "coresused": 0,
+            "coresfree": 2,
+            "memory": 4096,
+            "memoryused": 0,
+            "memoryfree": 4096,
+            "resources": {},
+            "resourcesused": {},
+            "resourcesfree": {},
+            "state": "ALIVE",
+            "lastheartbeat": 1789029807867
+          },
+          {
+            "id": "worker-20260910080818-172.18.0.6-34577",
+            "host": "172.18.0.6",
+            "port": 34577,
+            "webuiaddress": "http://172.18.0.6:8081",
+            "cores": 2,
+            "coresused": 0,
+            "coresfree": 2,
+            "memory": 4096,
+            "memoryused": 0,
+            "memoryfree": 4096,
+            "resources": {},
+            "resourcesused": {},
+            "resourcesfree": {},
+            "state": "ALIVE",
+            "lastheartbeat": 1789029795471
+          }
+        ],
+        "active_apps": []
+      }
+    }
+  ],
+  "upload_tool_schema": {
+    "properties": {
+      "destination": {
+        "title": "Destination",
+        "type": "string"
+      },
+      "content_base64": {
+        "title": "Content Base64",
+        "type": "string"
+      },
+      "expected_bytes": {
+        "title": "Expected Bytes",
+        "type": "integer"
+      },
+      "expected_sha256": {
+        "title": "Expected Sha256",
+        "type": "string"
+      }
+    },
+    "required": [
+      "destination",
+      "content_base64",
+      "expected_bytes",
+      "expected_sha256"
+    ],
+    "title": "hdfs_upload_fileArguments",
+    "type": "object"
+  },
+  "completed": "2026-09-10T08:43:29.286169+00:00",
+  "pass": true
+}

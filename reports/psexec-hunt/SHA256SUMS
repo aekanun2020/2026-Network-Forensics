@@ -1,0 +1,15 @@
+8d3d9efa5e61488e03ecb46fcf885c5313079bde1d4c69f626b5503edeb76b07  chain-of-custody-2026-09-10.md
+d637f60a2b3948d8894d5e27ee1c00fa8b932d2328d304a2e1422b031d420b23  support/analysis-record-index.json
+ace40fd4c3354d7f85bef92a8f673ce440f1db5b4eab85594ff6a4593485d6db  support/integrity-at-report.json
+7a02c8c4151ea1cbaa46fe6ed94615c74688d1064ddb30f4293cd9a260f61240  ../../cloud-activities/2026-09-10-002-psexec-import-and-binary-mcp.md
+04a76a0127c26cde03b3a33959100280cbba602e26ce7e9de7f74b7d97c6d29e  ../../cloud-activities/evidence/2026-09-10-binary-upload-client-replay.json
+f6f3387d398d94248b755337f0dfe43b3baf63a136f0e3ce044dc720768fe7ef  ../../cloud-activities/evidence/2026-09-10-native-binary-upload-readerror.json
+a38d1d3b96db3d078eb52b62ede9ee4fd59e46e74f50cd0c267138fbf2e981ca  ../../cloud-activities/evidence/2026-09-10-native-binary-upload-verification.json
+023eb3787e2bfd205c863abcc40672393340773b9fb1a7cfb3085824e284d7d0  ../../cloud-activities/evidence/2026-09-10-psexec-import-permission-failure.json
+2c300e848a1f5ca027853514705f5007ac56779b3a572eaea5f376ff9d0ee3b5  ../../cloud-activities/evidence/2026-09-10-psexec-import.json
+839ca8c36bc6d282bf4b44ba987baca8be09a514c9ae8e0bbd30555f41efc424  ../../cloud-activities/evidence/2026-09-10-student-1-public-mcp-verification.json
+62dbaefe21bd9a6e758ff7345162f299d7240d1fd41dfc1142878ede458c0c55  ../../cloud-activities/changes/2026-09-10-binary-upload/README.md
+ac0e6fc0a5ded67dd51300057605599d541a37b6fd1a7936e8ecde4ba531bbc9  ../../cloud-activities/changes/2026-09-10-binary-upload/nf01-integrity-baseline.json
+ff8e3d4405acafec5693d822dec88c075fb6e95f4036b5ee09c96827a05b46be  ../../cloud-activities/changes/2026-09-10-binary-upload/server.py.patch
+ff8cc968906cf2e6a1bd508b362ed0deeda3c1a72f9521af0a00d0b2abc78a01  ../../cloud-activities/changes/2026-09-10-binary-upload/upload_file.py
+e2b7e702331f2feab9be83c6d7462a77ab01f96581684517ff950186e53169aa  ../../cloud-activities/changes/2026-09-10-binary-upload/verify_binary_upload.py
