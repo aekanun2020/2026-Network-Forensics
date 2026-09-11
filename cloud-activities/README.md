@@ -33,3 +33,5 @@
 - [student-1: นำเข้า psexec-hunt และเพิ่ม binary MCP upload](2026-09-10-002-psexec-import-and-binary-mcp.md)
 
 - [MCP binary upload: source, client และผลทดสอบ](changes/2026-09-10-binary-upload/README.md)
+
+- [student-1-with-lab4: คืนบริการวันที่ 11 กันยายน](2026-09-11-001-student-1-with-lab4-restore.md)

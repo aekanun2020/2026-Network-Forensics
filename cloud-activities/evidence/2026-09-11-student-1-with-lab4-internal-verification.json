@@ -1,0 +1,186 @@
+{
+  "started_at": "2026-09-11T01:25:22.890188+00:00",
+  "scope": "internal VM MCP only; does not verify public TLS",
+  "checks": [
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-course-100k.pcap",
+        "bytes": 60853574,
+        "sha256": "fa9d5c21eb157e0630ff7524a656ea8bbf761951d602d238c4a35c9cb81ffa5a",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-dns-120.jsonl",
+        "bytes": 52043,
+        "sha256": "f46e39f91511c255b16f2a90ed03a3464951c4373dc7613c18f899794e7b8f70",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-zeek-conn-100k.jsonl",
+        "bytes": 37114964,
+        "sha256": "82736842b7831d314d37a60aae1becde703d07e046160091d1a6c45d9999e273",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-netflow-v5-100k.jsonl",
+        "bytes": 54407704,
+        "sha256": "3e29d4a44a915b6c2c578fab5883d1163da1e9aa37822531f85abcd6d70c0ca4",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-suricata-alerts-340.jsonl",
+        "bytes": 154267,
+        "sha256": "9cd3513a8bd84b65c6a1059fb168b6fbe2a28d07fe44051de3d42ccd103e66d7",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+      "result": {
+        "path": "/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "physical_path": "/mcp/student/agentic-siem/incident-lab/input/coherent-pcap-fortigate-100k.log",
+        "bytes": 47539569,
+        "sha256": "e404d45d9b16de5a5e49e783a599af17521cc8d609cbafc82865a5630a07dd36",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_sha256",
+      "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_stat",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng"
+      },
+      "result": {
+        "accessTime": 1789089946468,
+        "blockSize": 134217728,
+        "childrenNum": 0,
+        "fileId": 16404,
+        "group": "supergroup",
+        "length": 10027488,
+        "modificationTime": 1789029467586,
+        "owner": "root",
+        "pathSuffix": "",
+        "permission": "444",
+        "replication": 2,
+        "storagePolicy": 0,
+        "type": "FILE"
+      },
+      "is_error": false
+    },
+    {
+      "tool": "hdfs_pcap_packets",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "display_filter": "frame.number == 1",
+        "limit": 1,
+        "payload_bytes": 0
+      },
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "file_bytes": 10027488,
+        "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "display_filter": "frame.number == 1",
+        "matching_packets": 1,
+        "packets": [
+          {
+            "frame.number": "1",
+            "frame.time_epoch": "1697009845.469653538",
+            "ip.src": "10.0.0.132",
+            "ip.dst": "10.0.0.1",
+            "tcp.srcport": "39578",
+            "tcp.dstport": "53",
+            "udp.srcport": "",
+            "udp.dstport": "",
+            "tcp.len": "0",
+            "dns.qry.name": "",
+            "dns.a": "",
+            "_ws.col.Protocol": "TCP",
+            "tls.record.content_type": "",
+            "tls.handshake.type": "",
+            "packet_number": 1,
+            "utc": "2023-10-11T07:37:25.469654+00:00",
+            "payload_length": 0,
+            "payload_hex": "",
+            "payload_text": "",
+            "payload_truncated": false,
+            "protocol_observation": "not_established"
+          }
+        ],
+        "samples_truncated": false,
+        "complete_scan": true,
+        "dissector": "tshark",
+        "interpretation": "Observed packets only; no compromise verdict"
+      },
+      "is_error": false
+    }
+  ],
+  "status": "PASS",
+  "tools": [
+    "spark_save_job",
+    "spark_read_job",
+    "spark_replace_job_text",
+    "spark_validate_job",
+    "spark_submit_job",
+    "spark_job_status",
+    "spark_job_logs",
+    "spark_cancel_job",
+    "spark_list_jobs",
+    "spark_cluster_status",
+    "hdfs_list",
+    "hdfs_stat",
+    "hdfs_mkdir",
+    "hdfs_write_text",
+    "hdfs_read_text",
+    "hdfs_delete",
+    "hdfs_import_file",
+    "hdfs_upload_file",
+    "hdfs_cluster_status",
+    "hdfs_sha256",
+    "hdfs_read_lines",
+    "hdfs_query_records",
+    "hdfs_correlate_records",
+    "hdfs_pcap_packets"
+  ],
+  "finished_at": "2026-09-11T01:25:52.785430+00:00"
+}

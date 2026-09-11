@@ -53,3 +53,5 @@
 - [CoC Report: psexec-hunt — ลำดับการจัดการหลักฐานและข้อจำกัด](reports/psexec-hunt/chain-of-custody-2026-09-10.md)
 
 </details>
+
+- [คืนบริการ MCP บน student-1-with-lab4 วันที่ 11 กันยายน](cloud-activities/2026-09-11-001-student-1-with-lab4-restore.md)

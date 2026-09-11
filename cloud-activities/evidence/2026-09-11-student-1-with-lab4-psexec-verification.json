@@ -1,0 +1,9 @@
+{
+  "endpoint": "https://34-21-207-108.sslip.io/mcp",
+  "started_at": "2026-09-11T01:23:10.871492+00:00",
+  "status": "FAIL",
+  "checks": [],
+  "model_calls": 0,
+  "error": "unhandled errors in a TaskGroup (1 sub-exception)",
+  "finished_at": "2026-09-11T01:23:10.990815+00:00"
+}

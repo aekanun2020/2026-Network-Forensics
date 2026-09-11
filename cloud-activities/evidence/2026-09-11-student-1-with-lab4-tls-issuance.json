@@ -1,0 +1,135 @@
+{
+  "checked_at": "2026-09-11T01:25:59.849323+00:00",
+  "vm": "student-1-with-lab4",
+  "events": [
+    {
+      "ts": 1789089752.8817782,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "http-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089755.5364244,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "tls-alpn-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089755.5366056,
+      "level": "error",
+      "msg": "could not get certificate from issuer",
+      "identifier": "34-21-207-108.sslip.io",
+      "error": "HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io"
+    },
+    {
+      "ts": 1789089755.5366526,
+      "level": "error",
+      "msg": "will retry",
+      "error": "[34-21-207-108.sslip.io] Obtain: [34-21-207-108.sslip.io] solving challenge: 34-21-207-108.sslip.io: [34-21-207-108.sslip.io] authorization failed: HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io (ca=https://acme-v02.api.letsencrypt.org/directory)",
+      "attempt": 1,
+      "retrying_in": 60
+    },
+    {
+      "ts": 1789089817.8223565,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "tls-alpn-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089820.2844923,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "http-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089820.2845764,
+      "level": "error",
+      "msg": "could not get certificate from issuer",
+      "identifier": "34-21-207-108.sslip.io",
+      "error": "HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io"
+    },
+    {
+      "ts": 1789089820.284599,
+      "level": "error",
+      "msg": "will retry",
+      "error": "[34-21-207-108.sslip.io] Obtain: [34-21-207-108.sslip.io] solving challenge: 34-21-207-108.sslip.io: [34-21-207-108.sslip.io] authorization failed: HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io (ca=https://acme-staging-v02.api.letsencrypt.org/directory)",
+      "attempt": 2,
+      "retrying_in": 120
+    },
+    {
+      "ts": 1789089941.9385302,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "tls-alpn-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089944.3980317,
+      "level": "error",
+      "msg": "challenge failed",
+      "identifier": "34-21-207-108.sslip.io",
+      "challenge_type": "http-01",
+      "problem": {
+        "type": "urn:ietf:params:acme:error:dns",
+        "title": "",
+        "detail": "During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io",
+        "instance": "",
+        "subproblems": null
+      }
+    },
+    {
+      "ts": 1789089944.398109,
+      "level": "error",
+      "msg": "could not get certificate from issuer",
+      "identifier": "34-21-207-108.sslip.io",
+      "error": "HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io"
+    },
+    {
+      "ts": 1789089944.3981292,
+      "level": "error",
+      "msg": "will retry",
+      "error": "[34-21-207-108.sslip.io] Obtain: [34-21-207-108.sslip.io] solving challenge: 34-21-207-108.sslip.io: [34-21-207-108.sslip.io] authorization failed: HTTP 400 urn:ietf:params:acme:error:dns - During secondary validation: DNS problem: networking error looking up A for 34-21-207-108.sslip.io; DNS problem: networking error looking up AAAA for 34-21-207-108.sslip.io (ca=https://acme-staging-v02.api.letsencrypt.org/directory)",
+      "attempt": 3,
+      "retrying_in": 120
+    }
+  ]
+}

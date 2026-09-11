@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-09-11T01:22:48.417627+00:00",
+  "endpoint": "https://34-21-207-108.sslip.io/mcp",
+  "client_location": "operator Mac outside GCP VM, direct public HTTPS",
+  "sdk_version": "1.30.0",
+  "model_calls": 0,
+  "checks": [],
+  "status": "FAIL",
+  "error": "[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1082)"
+}
