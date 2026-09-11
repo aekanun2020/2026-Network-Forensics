@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-11T02:58:50.566764+00:00",
+  "zone": "asia-southeast1-b",
+  "events": [
+    {
+      "ts": 1789095419.0728807,
+      "level": "info",
+      "msg": "authorization finalized",
+      "identifier": "34-21-207-108.sslip.io"
+    },
+    {
+      "ts": 1789095419.0729225,
+      "level": "info",
+      "msg": "validations succeeded; finalizing order"
+    },
+    {
+      "ts": 1789095424.9730375,
+      "level": "info",
+      "msg": "certificate obtained successfully",
+      "identifier": "34-21-207-108.sslip.io"
+    }
+  ]
+}

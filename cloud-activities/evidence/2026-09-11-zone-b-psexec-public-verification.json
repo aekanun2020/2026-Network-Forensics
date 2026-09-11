@@ -1,0 +1,117 @@
+{
+  "endpoint": "https://34-21-207-108.sslip.io/mcp",
+  "started_at": "2026-09-11T02:57:56.235856+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "tool": "hdfs_stat",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng"
+      },
+      "is_error": false,
+      "result": {
+        "accessTime": 1789049131669,
+        "blockSize": 134217728,
+        "childrenNum": 0,
+        "fileId": 16404,
+        "group": "supergroup",
+        "length": 10027488,
+        "modificationTime": 1789029467586,
+        "owner": "root",
+        "pathSuffix": "",
+        "permission": "444",
+        "replication": 2,
+        "storagePolicy": 0,
+        "type": "FILE"
+      }
+    },
+    {
+      "tool": "hdfs_sha256",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng"
+      },
+      "is_error": false,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "physical_path": "/mcp/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "bytes": 10027488,
+        "sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "complete": true
+      }
+    },
+    {
+      "tool": "hdfs_pcap_packets",
+      "arguments": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "display_filter": "frame.number == 1",
+        "limit": 1,
+        "payload_bytes": 0
+      },
+      "is_error": false,
+      "result": {
+        "path": "/student/agentic-siem/additional-evidence/psexec-hunt/psexec-hunt.pcapng",
+        "file_bytes": 10027488,
+        "source_sha256": "85c1ded1fea23cb9277604f7b26a520718eed47445e4624182beb88c2388357f",
+        "display_filter": "frame.number == 1",
+        "matching_packets": 1,
+        "packets": [
+          {
+            "frame.number": "1",
+            "frame.time_epoch": "1697009845.469653538",
+            "ip.src": "10.0.0.132",
+            "ip.dst": "10.0.0.1",
+            "tcp.srcport": "39578",
+            "tcp.dstport": "53",
+            "udp.srcport": "",
+            "udp.dstport": "",
+            "tcp.len": "0",
+            "dns.qry.name": "",
+            "dns.a": "",
+            "_ws.col.Protocol": "TCP",
+            "tls.record.content_type": "",
+            "tls.handshake.type": "",
+            "packet_number": 1,
+            "utc": "2023-10-11T07:37:25.469654+00:00",
+            "payload_length": 0,
+            "payload_hex": "",
+            "payload_text": "",
+            "payload_truncated": false,
+            "protocol_observation": "not_established"
+          }
+        ],
+        "samples_truncated": false,
+        "complete_scan": true,
+        "dissector": "tshark",
+        "interpretation": "Observed packets only; no compromise verdict"
+      }
+    }
+  ],
+  "model_calls": 0,
+  "tools": [
+    "spark_save_job",
+    "spark_read_job",
+    "spark_replace_job_text",
+    "spark_validate_job",
+    "spark_submit_job",
+    "spark_job_status",
+    "spark_job_logs",
+    "spark_cancel_job",
+    "spark_list_jobs",
+    "spark_cluster_status",
+    "hdfs_list",
+    "hdfs_stat",
+    "hdfs_mkdir",
+    "hdfs_write_text",
+    "hdfs_read_text",
+    "hdfs_delete",
+    "hdfs_import_file",
+    "hdfs_upload_file",
+    "hdfs_cluster_status",
+    "hdfs_sha256",
+    "hdfs_read_lines",
+    "hdfs_query_records",
+    "hdfs_correlate_records",
+    "hdfs_pcap_packets"
+  ],
+  "finished_at": "2026-09-11T02:58:15.422660+00:00"
+}

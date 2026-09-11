@@ -55,3 +55,5 @@
 </details>
 
 - [คืนบริการ MCP บน student-1-with-lab4 วันที่ 11 กันยายน](cloud-activities/2026-09-11-001-student-1-with-lab4-restore.md)
+
+- [คืนบริการ lab4 ที่ zone asia-southeast1-b](cloud-activities/2026-09-11-002-student-1-with-lab4-zone-b-restore.md)
